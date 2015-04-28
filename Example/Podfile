@@ -1,0 +1,8 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+
+target 'PilightKit', :exclusive => true do
+  pod "PilightKit", :path => "../"
+
+  
+end

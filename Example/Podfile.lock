@@ -1,0 +1,14 @@
+PODS:
+  - PilightKit (0.1.0)
+
+DEPENDENCIES:
+  - PilightKit (from `../`)
+
+EXTERNAL SOURCES:
+  PilightKit:
+    :path: ../
+
+SPEC CHECKSUMS:
+  PilightKit: 5d8a53d9862ab42802e0387a4003cb262a3f823f
+
+COCOAPODS: 0.36.4
