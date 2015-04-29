@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.name             = "PilightKit"
   s.version          = "0.1.0"
   s.summary          = "PilightKit offers a simple Objecive-C library to access a pilight server."
-  s.description      = PilightKit is a easy to use Objective-C library to connect and interact with a pilight server.
+  s.description      = "PilightKit is a easy to use Objective-C library to connect and interact with a pilight server."
   s.homepage         = "https://github.com/dittsche/PilightKit"
   s.license          = 'MIT'
   s.author           = { "Alexander Dittrich" => "alexander.dittrich@me.com" }
