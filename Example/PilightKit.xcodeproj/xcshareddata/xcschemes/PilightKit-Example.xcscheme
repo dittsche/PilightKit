@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "PilightKit.xctest"
+               BlueprintIdentifier = "6003F589195388D20070C39A"
+               BuildableName = "PilightKit.app"
                BlueprintName = "PilightKit"
                ReferencedContainer = "container:PilightKit.xcodeproj">
             </BuildableReference>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6003F5AD195388D20070C39A"
-               BuildableName = "PilightKit.xctest"
-               BlueprintName = "PilightKit"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:PilightKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,8 +42,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "PilightKit.xctest"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "PilightKit.app"
             BlueprintName = "PilightKit"
             ReferencedContainer = "container:PilightKit.xcodeproj">
          </BuildableReference>
@@ -58,12 +58,11 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "PilightKit.xctest"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "PilightKit.app"
             BlueprintName = "PilightKit"
             ReferencedContainer = "container:PilightKit.xcodeproj">
          </BuildableReference>
@@ -77,12 +76,11 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6003F5AD195388D20070C39A"
-            BuildableName = "PilightKit.xctest"
+            BlueprintIdentifier = "6003F589195388D20070C39A"
+            BuildableName = "PilightKit.app"
             BlueprintName = "PilightKit"
             ReferencedContainer = "container:PilightKit.xcodeproj">
          </BuildableReference>

@@ -7,138 +7,888 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F7AFB77BC44C3E87D9716A1 /* Pods-PilightKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 340455892C7211F8178ABAFB /* Pods-PilightKit-dummy.m */; };
-		6462B68FE181B3CB41448193 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ABAFCC244D72ACC44AB4A82 /* Foundation.framework */; };
+		01A1E841EB8B159615DE7627 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D274D5550973A06F64D6780 /* DDContextFilterLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0266BCBD1566604ED25AF947 /* PilightRelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FEA3B44EA102E488F7E51BC /* PilightRelay.h */; };
+		043FBFB94CDA4FD82AA88177 /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F74053C057D499304FD05E /* DDAbstractDatabaseLogger.h */; };
+		051B639A6A0B8ABC8D284A0A /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D6F9A1B96A4C273F76D68D /* AsyncSocket.h */; };
+		064A7B8290A9D0ADE2E47EA3 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4673F3707859682C9F044F /* DDDispatchQueueLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0A00DB0951D909BCED254A78 /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 55857C3334845AF5B0600387 /* DDMultiFormatter.h */; };
+		0B151DB3FA1747DC1F2B334D /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DD551EBD95E95CD679CF9D /* DDLog+LOGV.h */; };
+		0B491628E7051FC55192FD14 /* PilightGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B8AF670C920208C87D809968 /* PilightGroup.h */; };
+		0B7A65E81F0D898F4D138FC6 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43D84CF7C4398688F2A7B3 /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0EA35DC07D4BC2141445671A /* PilightReadOnlyDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B958A621B99E2224D2FD34 /* PilightReadOnlyDevice.h */; };
+		10E12C062EF887D4D339D83A /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DA89CC42D927D684AF3A78 /* DDLogMacros.h */; };
+		116DF91E6C6370B8DA5751A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		1187B24C71C1F3E827CE363D /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 21D54C83A2A68939B8EB4CE3 /* DDASLLogger.h */; };
+		15E964E9165A451C5103830D /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A97A3D95A8A030A2277BF83 /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		17FEB50CD535645929723DD2 /* PilightWeather.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E020C0F12223AA456D4488 /* PilightWeather.h */; };
+		1BC120790A41FDC1078B13C9 /* PilightDeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AE22E734D8FD1FFA9B8DB30B /* PilightDeviceFactory.m */; };
+		1D2AE32F20D4A0BDF446F7FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		1F2703E02494D5D7DD1B57B5 /* PilightGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = B8AF670C920208C87D809968 /* PilightGroup.h */; };
+		1F592B58503EC392BDD984FB /* PilightReadOnlyDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B958A621B99E2224D2FD34 /* PilightReadOnlyDevice.h */; };
+		212CA8DD5FB8EC76A1C6F56A /* DDLog+LOGV.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DD551EBD95E95CD679CF9D /* DDLog+LOGV.h */; };
+		21A67F75AE5FB0EA297893E1 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2678B217DD753776B766C539 /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		223537E6C5D3779ECD13FF26 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE10986A10C7708835FE357 /* CFNetwork.framework */; };
+		230863E0477A72EA20C08D19 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC4942064E8350CCC056DD96 /* Pods-Tests-dummy.m */; };
+		25FFEF602F27B5E448EC2582 /* Pods-PilightKit-CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A244D73CF63206FCBAF0EB2 /* Pods-PilightKit-CocoaAsyncSocket-dummy.m */; };
+		26C92A9D53065A31F86CAC97 /* DDLogMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = D7DA89CC42D927D684AF3A78 /* DDLogMacros.h */; };
+		27CC004AC26BD5E00DE57BBE /* PilightReadOnlyDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B6AAF331DCA4F01FF455 /* PilightReadOnlyDevice.m */; };
+		280C02B4041C6AAAB928610F /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF15E48AA9B769325B94319 /* DDFileLogger.h */; };
+		28D44C610B546F51A79F46A7 /* PilightDeviceFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C1D6514A4E75DF70FCFCC06A /* PilightDeviceFactory.h */; };
+		2F5BD5BF987024D392F6392F /* PilightControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61728C951F243A6432B0B6 /* PilightControl.m */; };
+		30347579401121F28A0235EA /* PilightDimmer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7138187622BDADD5E0FF77F0 /* PilightDimmer.h */; };
+		30AEB72905AC196DA938F2C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE10986A10C7708835FE357 /* CFNetwork.framework */; };
+		319007F363B8668A8C48E044 /* PilightDeviceFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = C1D6514A4E75DF70FCFCC06A /* PilightDeviceFactory.h */; };
+		325E39F8CA59BA9B813FD452 /* PilightDimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1890216E5C8F3FBD46F0D9 /* PilightDimmer.m */; };
+		33E1C5FCDEC4080CB1D777FE /* Pods-Tests-CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD3E6A74842530362B9BDE1F /* Pods-Tests-CocoaLumberjack-dummy.m */; };
+		370273B4078F116C054CC07A /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = DF553EF54A0F1E2131FA4E71 /* AsyncUdpSocket.h */; };
+		389FCDD96F13D8853DFF245F /* PilightWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FDBAB24F546F9964D92040 /* PilightWeather.m */; };
+		3F518547E75DC63A324684EB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12D87E32F88AD059B5151C9 /* Security.framework */; };
+		42D3387FB7BF4A44D8815DB7 /* PilightWebcam.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A8E5CD0CFB68D6A6CB791 /* PilightWebcam.m */; };
+		44EE62B7B765B8EEA6079536 /* PilightStringDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5317F329DD607CBD7B03F678 /* PilightStringDefinitions.h */; };
+		45BC23F670BB0A2D60088396 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C06D3C79FFE14D5844C489A /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		490079CA67385AB4A1A405A2 /* PilightDateTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 07877D649C864363CCAD65D2 /* PilightDateTime.h */; };
+		4B248DDD31C60E43FA16640F /* PilightDimmer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7138187622BDADD5E0FF77F0 /* PilightDimmer.h */; };
+		4FA04B60D02EB4D604C2D4BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		50188E6A81CD43E34088C724 /* Pods-PilightKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E135CBA5F97619B994280E5D /* Pods-PilightKit-dummy.m */; };
+		52F675EF9B6881B2FC7448D0 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D43D84CF7C4398688F2A7B3 /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		539347532DD27513134F8790 /* DDFileLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = EAF15E48AA9B769325B94319 /* DDFileLogger.h */; };
+		556D74112F437BE4C1F9F2AF /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 101EC67B4DD7CBD1A0365628 /* DDASLLogCapture.h */; };
+		559591DA81ED1A7680545D2C /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5307D1D42806ED3FBFF59F5F /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		55F4CADC3F86458A833CF789 /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C48FB67CA1A4AFD3EA090B /* DDMultiFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		56577557B06A770A7FF312F8 /* PilightScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE2A6910CD8D5D61114ECE1 /* PilightScreen.m */; };
+		5675F8F5C53B56F0F0D59D5F /* PilightDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = A34A2CE2BD349E1D58519732 /* PilightDateTime.m */; };
+		569325F877B53170CB59EDCE /* PilightDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = EC34A8CCA7A9BC74462D84A2 /* PilightDevice.h */; };
+		5765CF108253DECCC7D34B49 /* PilightSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 79CC8602CC51E82CB7F48BA0 /* PilightSwitch.h */; };
+		5A2F40588B8F19E946B2CF66 /* DDASLLogCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 101EC67B4DD7CBD1A0365628 /* DDASLLogCapture.h */; };
+		5A2FA489F8256724299B14F1 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F4B8EA0AA14270DA0AB4608E /* DDLegacyMacros.h */; };
+		5A7AEE39B2CF904F4144CBE7 /* PilightStringDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5317F329DD607CBD7B03F678 /* PilightStringDefinitions.h */; };
+		5B179182EB00749C46258B1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		5C19C395942726A19052504D /* PilightControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC61728C951F243A6432B0B6 /* PilightControl.m */; };
+		5C58192429D0FC902E3F77B5 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E6E4002EE8D9D66A21C44DB8 /* GCDAsyncUdpSocket.h */; };
+		5FE5E344CD4A39BEA580C1AE /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 2678B217DD753776B766C539 /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		60DBA900A7138EC909B4ADCE /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0672C96BC61ABD69EE1804 /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		62A970C45521E23A2F4B41E5 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F49ADCFC6D02C54411AF7C47 /* DDTTYLogger.h */; };
+		65B9AD7F1BA8B2A89D4BAEA9 /* PilightScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE2A6910CD8D5D61114ECE1 /* PilightScreen.m */; };
+		6BF112D4BE4DC7FDDE146031 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5307D1D42806ED3FBFF59F5F /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6C893328C84995002028F98D /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B72B4E120F53873168ED0627 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6EE981681A22FFD898F2A003 /* PilightScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4F28435BD3E385E43D76AF /* PilightScreen.h */; };
+		70F04EC5F70A541959D5CC3A /* JSONCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1DA8A4F97BABED0E480995 /* JSONCreator.h */; };
+		714A3DC9C3867C4FC10CC3CB /* PilightKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1E4D6E194144D9BC074D15 /* PilightKit.h */; };
+		7839607EB04AFB901FB19ADB /* PilightGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CF99B92BB6F94A732A6A9F /* PilightGroup.m */; };
+		78B10851ADB694B7C71330F5 /* PilightSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0D261A016E6DFB10CFA6 /* PilightSwitch.m */; };
+		78FD40980E75E11A4B74456E /* DDASLLogCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A0672C96BC61ABD69EE1804 /* DDASLLogCapture.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		79A86C016484B1D706B68B24 /* DDTTYLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F49ADCFC6D02C54411AF7C47 /* DDTTYLogger.h */; };
+		7AF68C848513E7E6C36536C3 /* PilightDimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1890216E5C8F3FBD46F0D9 /* PilightDimmer.m */; };
+		7BA85E40E4030D392EBB64D7 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C84A89B0AD0BB06B909E8 /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7C047B1ABB557EF738DB8110 /* Pods-PilightKit-PilightKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D05C97908229CA52D74CA8 /* Pods-PilightKit-PilightKit-dummy.m */; };
+		7D54AB51060B683892273682 /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 281849D78A15FC5CD152AD9C /* DDAssertMacros.h */; };
+		7EAF5A6C7835521B5A0E85CC /* DDMultiFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 55857C3334845AF5B0600387 /* DDMultiFormatter.h */; };
+		80155B3298CE23C134790A7B /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AFF6F39D4363EB4C1AE45268 /* GCDAsyncSocket.h */; };
+		81396F8B9E4E824F2E0E6F92 /* JSONCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF32E8649D8681352E7A6DF /* JSONCreator.m */; };
+		8244D2A9605B52338D085CD8 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E12B195550725DEAD6AE56 /* DDLog.h */; };
+		8405E5DE348552FD22542543 /* PilightDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = A34A2CE2BD349E1D58519732 /* PilightDateTime.m */; };
+		85DFFA6A18008306182C5185 /* DDAbstractDatabaseLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F74053C057D499304FD05E /* DDAbstractDatabaseLogger.h */; };
+		8C718603A16FF006EBE08D59 /* DDASLLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 21D54C83A2A68939B8EB4CE3 /* DDASLLogger.h */; };
+		8D195B3002ECAFD6EEBDCB67 /* PilightRelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A059137C0217167E50878E /* PilightRelay.m */; };
+		8E4B8714F033E235654D21AF /* PilightGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CF99B92BB6F94A732A6A9F /* PilightGroup.m */; };
+		9108BCF79BCCCB66B1AFD98D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		93F37E4080E9EC8EDD0A1A83 /* PilightKit.h in Headers */ = {isa = PBXBuildFile; fileRef = FE1E4D6E194144D9BC074D15 /* PilightKit.h */; };
+		94DBF32FD429FA62F6757099 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B9DC8123BDAF128311AE7 /* DDLog.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		98AA70860FA55B8CD6C7D0E8 /* DDLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E12B195550725DEAD6AE56 /* DDLog.h */; };
+		9923AB31224E2864DE94AFCC /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D6F9A1B96A4C273F76D68D /* AsyncSocket.h */; };
+		9AEFD0CBC0AA5CDC26DF4EC6 /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F816A701DA51E8671AC7089 /* DDDispatchQueueLogFormatter.h */; };
+		9E23A731AF42CFE10B7BA20C /* PilightDeviceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AE22E734D8FD1FFA9B8DB30B /* PilightDeviceFactory.m */; };
+		A446134275FA45C3E775E0F5 /* DDContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D274D5550973A06F64D6780 /* DDContextFilterLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A50AFFB3DA5EAED6781B2C5B /* DDMultiFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C48FB67CA1A4AFD3EA090B /* DDMultiFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A55D49C4F998B6C9B91695FE /* PilightDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = EC34A8CCA7A9BC74462D84A2 /* PilightDevice.h */; };
+		A745A35CD7BCDCFAFF245EE6 /* PilightRelay.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FEA3B44EA102E488F7E51BC /* PilightRelay.h */; };
+		A9130B4F773C10429678B43D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		ADBF88CE0DC1D585C07D60BB /* PilightDateTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 07877D649C864363CCAD65D2 /* PilightDateTime.h */; };
+		AEA6EBD89E2C4B406DE18551 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3970FB120A3FC74767D8916B /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B08C03607BCF097447590A7A /* JSONCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = FF1DA8A4F97BABED0E480995 /* JSONCreator.h */; };
+		B2B0A21B58B3AE0E80698233 /* PilightWebcam.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4A8E5CD0CFB68D6A6CB791 /* PilightWebcam.m */; };
+		B37D13DE6F85838F0D430E94 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = DF553EF54A0F1E2131FA4E71 /* AsyncUdpSocket.h */; };
+		B4DEBF786D2DA19A8E09F1EA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		B4F87DBC55BA91830063E0C6 /* PilightWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = D0FDBAB24F546F9964D92040 /* PilightWeather.m */; };
+		B5771C82D3B5CB35F8CA81F9 /* DDLegacyMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F4B8EA0AA14270DA0AB4608E /* DDLegacyMacros.h */; };
+		B6141EDA598C1BC23861FFF7 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C06D3C79FFE14D5844C489A /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B64881F3FF33A472022858BE /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = E6E4002EE8D9D66A21C44DB8 /* GCDAsyncUdpSocket.h */; };
+		B8548F78FF02055AE52FC709 /* JSONCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF32E8649D8681352E7A6DF /* JSONCreator.m */; };
+		B8E20B03E4A0751C54FCC1DB /* PilightScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = CC4F28435BD3E385E43D76AF /* PilightScreen.h */; };
+		BB78C6F1EC348CABADB89D02 /* PilightControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BC3F1D729E7C092D1E5185 /* PilightControl.h */; };
+		BEB80521FD84B60B53D3EED1 /* PilightDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4098096A5C8724F125AA0A /* PilightDevice.m */; };
+		C41A32D151B2AE5955C1A655 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290C6334EF436D6171B51C37 /* Foundation.framework */; };
+		C4AAFA3C92F574B2E2B8BF94 /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C6DC4D911641078C813FBC /* CocoaLumberjack.h */; };
+		C75ABE011559730399DED659 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A97A3D95A8A030A2277BF83 /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C9C48F7B1A6D5B2EF0BAF1E2 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AFF6F39D4363EB4C1AE45268 /* GCDAsyncSocket.h */; };
+		CAB27036D644011DD915B09C /* PilightWebcam.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B234F80699940716910C95 /* PilightWebcam.h */; };
+		CEB704666C6EA3930E989D90 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12D87E32F88AD059B5151C9 /* Security.framework */; };
+		D00F62B8F1EFF2ED201589AC /* PilightSwitch.h in Headers */ = {isa = PBXBuildFile; fileRef = 79CC8602CC51E82CB7F48BA0 /* PilightSwitch.h */; };
+		D1DC5AD257D1A42B2389A565 /* PilightRelay.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A059137C0217167E50878E /* PilightRelay.m */; };
+		D3DDE2DCF7258EABE25155A9 /* PilightWeather.h in Headers */ = {isa = PBXBuildFile; fileRef = 41E020C0F12223AA456D4488 /* PilightWeather.h */; };
+		D4918926D71CBC59F4842CAF /* PilightSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F9EB0D261A016E6DFB10CFA6 /* PilightSwitch.m */; };
+		D5A28F14E44644A923EFCF65 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C84A89B0AD0BB06B909E8 /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D8092419753E037AA731B3AC /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4673F3707859682C9F044F /* DDDispatchQueueLogFormatter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D96E58F88DA2501EF4CBBBF6 /* DDAssertMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 281849D78A15FC5CD152AD9C /* DDAssertMacros.h */; };
+		DB71186B178454D11EB2C133 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = B72B4E120F53873168ED0627 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DC67077424D27A6811AC953F /* PilightWebcam.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B234F80699940716910C95 /* PilightWebcam.h */; };
+		DEA02D73B98444C93A6DB8C0 /* Pods-PilightKit-CocoaLumberjack-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 429A096119B2F9A94AFF1284 /* Pods-PilightKit-CocoaLumberjack-dummy.m */; };
+		E57D97F19247D71368DE0245 /* PilightDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4098096A5C8724F125AA0A /* PilightDevice.m */; };
+		E5C5F5EEE508CC7791A9B0C0 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 94BA1E72BB4100A84DDD5C9B /* DDContextFilterLogFormatter.h */; };
+		EE271473EEA56CE53F62D852 /* PilightControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 88BC3F1D729E7C092D1E5185 /* PilightControl.h */; };
+		EE56E0026277490A209BAB0B /* CocoaLumberjack.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C6DC4D911641078C813FBC /* CocoaLumberjack.h */; };
+		EF350B3DAFFA183DB97EB8C6 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7B9DC8123BDAF128311AE7 /* DDLog.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EF403FB21358C36B0E3F74A1 /* PilightControlDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E7A4A7C8A95C14D59890FB /* PilightControlDelegate.h */; };
+		F15A82998149FDA289E761BD /* DDDispatchQueueLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F816A701DA51E8671AC7089 /* DDDispatchQueueLogFormatter.h */; };
+		F4C3C69E9A15DBAEC2EE7CB1 /* Pods-Tests-CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 341EE3778C2D659951491278 /* Pods-Tests-CocoaAsyncSocket-dummy.m */; };
+		FA217BFF036A65B60B2C2BC5 /* Pods-Tests-PilightKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9258426F61B87A1609347C0E /* Pods-Tests-PilightKit-dummy.m */; };
+		FAEE9AA2D206942E1AEA64ED /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 3970FB120A3FC74767D8916B /* DDTTYLogger.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FB2B225FE4167B3AC80394E4 /* DDContextFilterLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 94BA1E72BB4100A84DDD5C9B /* DDContextFilterLogFormatter.h */; };
+		FD702FC7C565F5EAF221FBB2 /* PilightControlDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E7A4A7C8A95C14D59890FB /* PilightControlDelegate.h */; };
+		FF6F7D1262892146BC25E756 /* PilightReadOnlyDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC6B6AAF331DCA4F01FF455 /* PilightReadOnlyDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F1E47678F37503A01B12491D /* PBXContainerItemProxy */ = {
+		002C4E517C6EAF5423BE00C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FDDA4B073CCAF587C5C819B /* Project object */;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2914DD4A2DE82F104EAA19FF;
+			remoteGlobalIDString = 6E1B19868231BB1A9EF91382;
+			remoteInfo = "Pods-Tests-PilightKit";
+		};
+		1C5E98F5E0CDEE4E37C9832A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A123AD0DEF439C044519C380;
+			remoteInfo = "Pods-PilightKit-CocoaAsyncSocket";
+		};
+		54F524A210E3994E22EC6F4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A00C340B0A04A76873AB6AE;
+			remoteInfo = "Pods-Tests-CocoaAsyncSocket";
+		};
+		75962BA1EC88C91B282AC3FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F02DF96D27DD315A7A304B;
+			remoteInfo = "Pods-Tests-CocoaLumberjack";
+		};
+		AB5B18DBB121190DC1B36C2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 68CE14BED377F3D913C5BA00;
 			remoteInfo = "Pods-PilightKit-PilightKit-PilightKit";
+		};
+		AEBBE48E34803EBA382C2AC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0257D76BD1B1DD5828DDE4ED;
+			remoteInfo = "Pods-PilightKit-CocoaLumberjack";
+		};
+		B99C2670E9B28720B22B452A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0257D76BD1B1DD5828DDE4ED;
+			remoteInfo = "Pods-PilightKit-CocoaLumberjack";
+		};
+		BA80BD640252432546528543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A49F30974F2EB69A2C51013E;
+			remoteInfo = "Pods-PilightKit-PilightKit";
+		};
+		BA9FDD77333C59342F312A35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A123AD0DEF439C044519C380;
+			remoteInfo = "Pods-PilightKit-CocoaAsyncSocket";
+		};
+		C374F2E1D179552EDC2BFAA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 752C933DE9353685D9686134;
+			remoteInfo = "Pods-Tests-PilightKit-PilightKit";
+		};
+		C68231E79A82F9ED5977708B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A00C340B0A04A76873AB6AE;
+			remoteInfo = "Pods-Tests-CocoaAsyncSocket";
+		};
+		C846B491A0F372743FB9394E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5039A5E17FA23169596C7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7F02DF96D27DD315A7A304B;
+			remoteInfo = "Pods-Tests-CocoaLumberjack";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		31B64A0A69390A93B35F0BF2 /* Pods-PilightKit-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PilightKit-environment.h"; sourceTree = "<group>"; };
-		340455892C7211F8178ABAFB /* Pods-PilightKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PilightKit-dummy.m"; sourceTree = "<group>"; };
-		6C207E1D89F812A7320B08C8 /* libPods-PilightKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PilightKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7ABAFCC244D72ACC44AB4A82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7CBB64312BDD91EF04F53FE6 /* Pods-PilightKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit.release.xcconfig"; sourceTree = "<group>"; };
-		8FF3592B7E5D4012E095E666 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A18552449ADEB4B6FE29F899 /* PilightKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PilightKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		B016FF62532880BBBC80527A /* Pods-PilightKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PilightKit-acknowledgements.plist"; sourceTree = "<group>"; };
-		CE7FF567E16E012F22FC8636 /* Pods-PilightKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PilightKit-resources.sh"; sourceTree = "<group>"; };
-		F2B95E18A0E53FE1F804185C /* Pods-PilightKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PilightKit-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FA72D95B262878214BB298A4 /* Pods-PilightKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit.debug.xcconfig"; sourceTree = "<group>"; };
+		04E53F737AB9BA42AB238B0D /* Pods-PilightKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PilightKit-resources.sh"; sourceTree = "<group>"; };
+		0557C66771E1FC5A6AC21437 /* Pods-PilightKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PilightKit-acknowledgements.plist"; sourceTree = "<group>"; };
+		05C6DC4D911641078C813FBC /* CocoaLumberjack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaLumberjack.h; path = Classes/CocoaLumberjack.h; sourceTree = "<group>"; };
+		0691334B6DBDE73A5748BCBE /* PilightKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PilightKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		07877D649C864363CCAD65D2 /* PilightDateTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightDateTime.h; sourceTree = "<group>"; };
+		0D33F640A0D624F1FEA22FC0 /* libPods-Tests-PilightKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-PilightKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		101EC67B4DD7CBD1A0365628 /* DDASLLogCapture.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogCapture.h; path = Classes/DDASLLogCapture.h; sourceTree = "<group>"; };
+		1256591C687D47CA29DC7AB3 /* Pods-PilightKit-PilightKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit-PilightKit-Private.xcconfig"; sourceTree = "<group>"; };
+		13B958A621B99E2224D2FD34 /* PilightReadOnlyDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightReadOnlyDevice.h; sourceTree = "<group>"; };
+		16DCD00EA12519CFFE492BAB /* Pods-Tests-PilightKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-PilightKit-Private.xcconfig"; path = "../Pods-Tests-PilightKit/Pods-Tests-PilightKit-Private.xcconfig"; sourceTree = "<group>"; };
+		190492415CF76FF267C59B6C /* libPods-PilightKit-CocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PilightKit-CocoaLumberjack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A1890216E5C8F3FBD46F0D9 /* PilightDimmer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightDimmer.m; sourceTree = "<group>"; };
+		1A97A3D95A8A030A2277BF83 /* AsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
+		1FB2B30A16BF111511D63CD9 /* Pods-Tests-CocoaLumberjack-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-CocoaLumberjack-Private.xcconfig"; path = "../Pods-Tests-CocoaLumberjack/Pods-Tests-CocoaLumberjack-Private.xcconfig"; sourceTree = "<group>"; };
+		204FD29FE9C4AA1A80422636 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		21D54C83A2A68939B8EB4CE3 /* DDASLLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDASLLogger.h; path = Classes/DDASLLogger.h; sourceTree = "<group>"; };
+		23E12B195550725DEAD6AE56 /* DDLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
+		24397906A9B7C8A4CBE83A14 /* PilightKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PilightKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2678B217DD753776B766C539 /* AsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
+		27B234F80699940716910C95 /* PilightWebcam.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightWebcam.h; sourceTree = "<group>"; };
+		281849D78A15FC5CD152AD9C /* DDAssertMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
+		290C6334EF436D6171B51C37 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2A055B376AD6FB29EC51D760 /* Pods-PilightKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit.debug.xcconfig"; sourceTree = "<group>"; };
+		2A0672C96BC61ABD69EE1804 /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Classes/DDASLLogCapture.m; sourceTree = "<group>"; };
+		2C301FC757B504022969D2B3 /* Pods-PilightKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit.release.xcconfig"; sourceTree = "<group>"; };
+		32259E4EE06AC8FDA98E10DE /* Pods-Tests-PilightKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-PilightKit-prefix.pch"; path = "../Pods-Tests-PilightKit/Pods-Tests-PilightKit-prefix.pch"; sourceTree = "<group>"; };
+		329D0889A3D1D517F84A7CCA /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		341EE3778C2D659951491278 /* Pods-Tests-CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-CocoaAsyncSocket-dummy.m"; path = "../Pods-Tests-CocoaAsyncSocket/Pods-Tests-CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		37F74053C057D499304FD05E /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDAbstractDatabaseLogger.h; path = Classes/DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		3970FB120A3FC74767D8916B /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Classes/DDTTYLogger.m; sourceTree = "<group>"; };
+		398A4994BB57B2F1C33CB42A /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
+		3B73A1D70F8E846995C4CA8E /* Pods-PilightKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PilightKit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		41E020C0F12223AA456D4488 /* PilightWeather.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightWeather.h; sourceTree = "<group>"; };
+		429A096119B2F9A94AFF1284 /* Pods-PilightKit-CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PilightKit-CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
+		43A059137C0217167E50878E /* PilightRelay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightRelay.m; sourceTree = "<group>"; };
+		4AE4466EBB99B09E83F03E41 /* libPods-PilightKit-CocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PilightKit-CocoaAsyncSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B425A39C4B225426680864A /* Pods-Tests-CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-CocoaAsyncSocket.xcconfig"; path = "../Pods-Tests-CocoaAsyncSocket/Pods-Tests-CocoaAsyncSocket.xcconfig"; sourceTree = "<group>"; };
+		4D43D84CF7C4398688F2A7B3 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDAbstractDatabaseLogger.m; path = Classes/DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		4FEA3B44EA102E488F7E51BC /* PilightRelay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightRelay.h; sourceTree = "<group>"; };
+		52DEA84075F5DACC18920DEE /* Pods-Tests-CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-CocoaLumberjack.xcconfig"; path = "../Pods-Tests-CocoaLumberjack/Pods-Tests-CocoaLumberjack.xcconfig"; sourceTree = "<group>"; };
+		5307D1D42806ED3FBFF59F5F /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		5317F329DD607CBD7B03F678 /* PilightStringDefinitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightStringDefinitions.h; sourceTree = "<group>"; };
+		55857C3334845AF5B0600387 /* DDMultiFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDMultiFormatter.h; path = Classes/Extensions/DDMultiFormatter.h; sourceTree = "<group>"; };
+		57DF303135E5AC9FB96395F0 /* libPods-Tests-CocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-CocoaLumberjack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C06D3C79FFE14D5844C489A /* DDASLLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogger.m; path = Classes/DDASLLogger.m; sourceTree = "<group>"; };
+		5C1D04F2A94D01F295CE9A78 /* libPods-Tests-CocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-CocoaAsyncSocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E4A8E5CD0CFB68D6A6CB791 /* PilightWebcam.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightWebcam.m; sourceTree = "<group>"; };
+		5EE9B914BA70E6A301A8B5E8 /* Pods-Tests-CocoaAsyncSocket-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-CocoaAsyncSocket-Private.xcconfig"; path = "../Pods-Tests-CocoaAsyncSocket/Pods-Tests-CocoaAsyncSocket-Private.xcconfig"; sourceTree = "<group>"; };
+		5F816A701DA51E8671AC7089 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		6A2E4BD13D7886C1314BF463 /* Pods-Tests-CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-CocoaLumberjack-prefix.pch"; path = "../Pods-Tests-CocoaLumberjack/Pods-Tests-CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
+		6D274D5550973A06F64D6780 /* DDContextFilterLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDContextFilterLogFormatter.m; path = Classes/Extensions/DDContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		6DE2A6910CD8D5D61114ECE1 /* PilightScreen.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightScreen.m; sourceTree = "<group>"; };
+		7138187622BDADD5E0FF77F0 /* PilightDimmer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightDimmer.h; sourceTree = "<group>"; };
+		720CA73EE39D76860A7EDABC /* Pods-PilightKit-CocoaAsyncSocket-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit-CocoaAsyncSocket-Private.xcconfig"; sourceTree = "<group>"; };
+		74193192A373E16195683CED /* Pods-PilightKit-CocoaLumberjack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit-CocoaLumberjack.xcconfig"; sourceTree = "<group>"; };
+		75D05C97908229CA52D74CA8 /* Pods-PilightKit-PilightKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PilightKit-PilightKit-dummy.m"; sourceTree = "<group>"; };
+		77E7A4A7C8A95C14D59890FB /* PilightControlDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightControlDelegate.h; sourceTree = "<group>"; };
+		79CC8602CC51E82CB7F48BA0 /* PilightSwitch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightSwitch.h; sourceTree = "<group>"; };
+		79D47B4887B53DF45FED4CB6 /* Pods-PilightKit-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PilightKit-environment.h"; sourceTree = "<group>"; };
+		7A244D73CF63206FCBAF0EB2 /* Pods-PilightKit-CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PilightKit-CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		876430516766911AC34F306A /* Pods-Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-environment.h"; sourceTree = "<group>"; };
+		88BC3F1D729E7C092D1E5185 /* PilightControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightControl.h; sourceTree = "<group>"; };
+		88BEC8168F69F1A792A599CF /* libPods-PilightKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PilightKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D4673F3707859682C9F044F /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Classes/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		9258426F61B87A1609347C0E /* Pods-Tests-PilightKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-PilightKit-dummy.m"; path = "../Pods-Tests-PilightKit/Pods-Tests-PilightKit-dummy.m"; sourceTree = "<group>"; };
+		92C48FB67CA1A4AFD3EA090B /* DDMultiFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDMultiFormatter.m; path = Classes/Extensions/DDMultiFormatter.m; sourceTree = "<group>"; };
+		94BA1E72BB4100A84DDD5C9B /* DDContextFilterLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDContextFilterLogFormatter.h; path = Classes/Extensions/DDContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		9C8643D5E5C3FF37F44D5B80 /* Pods-PilightKit-PilightKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit-PilightKit.xcconfig"; sourceTree = "<group>"; };
+		A0CF99B92BB6F94A732A6A9F /* PilightGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightGroup.m; sourceTree = "<group>"; };
+		A34A2CE2BD349E1D58519732 /* PilightDateTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightDateTime.m; sourceTree = "<group>"; };
+		A3653E8D215468817C207945 /* Pods-PilightKit-CocoaLumberjack-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit-CocoaLumberjack-Private.xcconfig"; sourceTree = "<group>"; };
+		AE22E734D8FD1FFA9B8DB30B /* PilightDeviceFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightDeviceFactory.m; sourceTree = "<group>"; };
+		AFF6F39D4363EB4C1AE45268 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		B72B4E120F53873168ED0627 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		B8AF670C920208C87D809968 /* PilightGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightGroup.h; sourceTree = "<group>"; };
+		BA5ED652FDB858F7FE0F32EE /* Pods-Tests-PilightKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-PilightKit.xcconfig"; path = "../Pods-Tests-PilightKit/Pods-Tests-PilightKit.xcconfig"; sourceTree = "<group>"; };
+		BCC6B6AAF331DCA4F01FF455 /* PilightReadOnlyDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightReadOnlyDevice.m; sourceTree = "<group>"; };
+		C0880EFD62009F844E44F0AB /* Pods-Tests-CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-CocoaAsyncSocket-prefix.pch"; path = "../Pods-Tests-CocoaAsyncSocket/Pods-Tests-CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		C1D6514A4E75DF70FCFCC06A /* PilightDeviceFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightDeviceFactory.h; sourceTree = "<group>"; };
+		C88361D3F49AD8E8272137F0 /* Pods-PilightKit-CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PilightKit-CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
+		CC4F28435BD3E385E43D76AF /* PilightScreen.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightScreen.h; sourceTree = "<group>"; };
+		CD3E6A74842530362B9BDE1F /* Pods-Tests-CocoaLumberjack-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-CocoaLumberjack-dummy.m"; path = "../Pods-Tests-CocoaLumberjack/Pods-Tests-CocoaLumberjack-dummy.m"; sourceTree = "<group>"; };
+		D09C84A89B0AD0BB06B909E8 /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Classes/DDFileLogger.m; sourceTree = "<group>"; };
+		D0FDBAB24F546F9964D92040 /* PilightWeather.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightWeather.m; sourceTree = "<group>"; };
+		D12D87E32F88AD059B5151C9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		D2DD551EBD95E95CD679CF9D /* DDLog+LOGV.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDLog+LOGV.h"; path = "Classes/DDLog+LOGV.h"; sourceTree = "<group>"; };
+		D7DA89CC42D927D684AF3A78 /* DDLogMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
+		DCF32E8649D8681352E7A6DF /* JSONCreator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = JSONCreator.m; sourceTree = "<group>"; };
+		DF553EF54A0F1E2131FA4E71 /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		E023AFF44782DF51DB47EA41 /* libPods-PilightKit-PilightKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PilightKit-PilightKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E135CBA5F97619B994280E5D /* Pods-PilightKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PilightKit-dummy.m"; sourceTree = "<group>"; };
+		E6E4002EE8D9D66A21C44DB8 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		E9A421786D164707B47AA872 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E9E7FE68C91A5AD15E8AB76B /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		EA4098096A5C8724F125AA0A /* PilightDevice.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightDevice.m; sourceTree = "<group>"; };
+		EAF15E48AA9B769325B94319 /* DDFileLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDFileLogger.h; path = Classes/DDFileLogger.h; sourceTree = "<group>"; };
+		EC34A8CCA7A9BC74462D84A2 /* PilightDevice.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightDevice.h; sourceTree = "<group>"; };
+		EC4942064E8350CCC056DD96 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
+		EC61728C951F243A6432B0B6 /* PilightControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightControl.m; sourceTree = "<group>"; };
+		ED7B9DC8123BDAF128311AE7 /* DDLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Classes/DDLog.m; sourceTree = "<group>"; };
+		ED7C08CA83719C3088491353 /* Pods-PilightKit-CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PilightKit-CocoaAsyncSocket.xcconfig"; sourceTree = "<group>"; };
+		EEE10986A10C7708835FE357 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		F3D6F9A1B96A4C273F76D68D /* AsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		F49ADCFC6D02C54411AF7C47 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
+		F4B8EA0AA14270DA0AB4608E /* DDLegacyMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDLegacyMacros.h; path = Classes/DDLegacyMacros.h; sourceTree = "<group>"; };
+		F8A2C616635B54FFC70B80E6 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9EB0D261A016E6DFB10CFA6 /* PilightSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = PilightSwitch.m; sourceTree = "<group>"; };
+		FB84EDA2B17C32053B762CA5 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FB9FBF2A6F20D47C3A41DB75 /* Pods-PilightKit-PilightKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PilightKit-PilightKit-prefix.pch"; sourceTree = "<group>"; };
+		FE1E4D6E194144D9BC074D15 /* PilightKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PilightKit.h; sourceTree = "<group>"; };
+		FE2C16ABA2FBEF73F179FABF /* Pods-PilightKit-CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PilightKit-CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		FF1DA8A4F97BABED0E480995 /* JSONCreator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = JSONCreator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5D6C082B89AF4187C87B336E /* Frameworks */ = {
+		055D1E933459EDC55745A32B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAB8D964413782912F1EE289 /* Frameworks */ = {
+		6E6CA9CDCBA123CEF61F264C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6462B68FE181B3CB41448193 /* Foundation.framework in Frameworks */,
+				223537E6C5D3779ECD13FF26 /* CFNetwork.framework in Frameworks */,
+				5B179182EB00749C46258B1A /* Foundation.framework in Frameworks */,
+				CEB704666C6EA3930E989D90 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E80896579D9A796F31168A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9130B4F773C10429678B43D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5794297C629866FF9C68AA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				116DF91E6C6370B8DA5751A6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BE203AB0AE8F4FE4DA519D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C376895C56E070C2E1BCFB38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30AEB72905AC196DA938F2C4 /* CFNetwork.framework in Frameworks */,
+				B4DEBF786D2DA19A8E09F1EA /* Foundation.framework in Frameworks */,
+				3F518547E75DC63A324684EB /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF582234FDB8CABB5CE52D89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9108BCF79BCCCB66B1AFD98D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05646CC341741E32FC302EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D2AE32F20D4A0BDF446F7FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED69F126B256B0E04AEFE753 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FA04B60D02EB4D604C2D4BD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBABA24EB23479EF0B97ADC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41A32D151B2AE5955C1A655 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2AB40D80BB7FA02AA0900D36 /* Targets Support Files */ = {
+		05F5534FFAA878F3D45E7623 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				A31652EB9AF72E2B353F1072 /* Pods-PilightKit */,
+				56D3EF1D0D26B265601C09B0 /* Classes */,
 			);
-			name = "Targets Support Files";
+			path = Pod;
 			sourceTree = "<group>";
 		};
-		5DD93143DCA483B44CAE83E9 /* iOS */ = {
+		100D1D2B121E6D4DC6AB419F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7ABAFCC244D72ACC44AB4A82 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		72E9E29E9C10575C8E7F6368 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5DD93143DCA483B44CAE83E9 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A1111669659D2D8C651A7A1B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A18552449ADEB4B6FE29F899 /* PilightKit.bundle */,
-				6C207E1D89F812A7320B08C8 /* libPods-PilightKit.a */,
+				24397906A9B7C8A4CBE83A14 /* PilightKit.bundle */,
+				0691334B6DBDE73A5748BCBE /* PilightKit.bundle */,
+				88BEC8168F69F1A792A599CF /* libPods-PilightKit.a */,
+				4AE4466EBB99B09E83F03E41 /* libPods-PilightKit-CocoaAsyncSocket.a */,
+				190492415CF76FF267C59B6C /* libPods-PilightKit-CocoaLumberjack.a */,
+				E023AFF44782DF51DB47EA41 /* libPods-PilightKit-PilightKit.a */,
+				F8A2C616635B54FFC70B80E6 /* libPods-Tests.a */,
+				5C1D04F2A94D01F295CE9A78 /* libPods-Tests-CocoaAsyncSocket.a */,
+				57DF303135E5AC9FB96395F0 /* libPods-Tests-CocoaLumberjack.a */,
+				0D33F640A0D624F1FEA22FC0 /* libPods-Tests-PilightKit.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A31652EB9AF72E2B353F1072 /* Pods-PilightKit */ = {
+		1326CEE2A90B14BEFC5EFBA8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F2B95E18A0E53FE1F804185C /* Pods-PilightKit-acknowledgements.markdown */,
-				B016FF62532880BBBC80527A /* Pods-PilightKit-acknowledgements.plist */,
-				340455892C7211F8178ABAFB /* Pods-PilightKit-dummy.m */,
-				31B64A0A69390A93B35F0BF2 /* Pods-PilightKit-environment.h */,
-				CE7FF567E16E012F22FC8636 /* Pods-PilightKit-resources.sh */,
-				FA72D95B262878214BB298A4 /* Pods-PilightKit.debug.xcconfig */,
-				7CBB64312BDD91EF04F53FE6 /* Pods-PilightKit.release.xcconfig */,
+				564F325545D24CAD33492F31 /* CocoaAsyncSocket */,
+				D59EBDD6778C709FC747C0EC /* CocoaLumberjack */,
 			);
-			name = "Pods-PilightKit";
-			path = "Target Support Files/Pods-PilightKit";
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		DFA44866B58EA2A3154AD82A /* PilightKit */ = {
+		2B458C531E826A8F6752F7BB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				74193192A373E16195683CED /* Pods-PilightKit-CocoaLumberjack.xcconfig */,
+				A3653E8D215468817C207945 /* Pods-PilightKit-CocoaLumberjack-Private.xcconfig */,
+				429A096119B2F9A94AFF1284 /* Pods-PilightKit-CocoaLumberjack-dummy.m */,
+				C88361D3F49AD8E8272137F0 /* Pods-PilightKit-CocoaLumberjack-prefix.pch */,
+				52DEA84075F5DACC18920DEE /* Pods-Tests-CocoaLumberjack.xcconfig */,
+				1FB2B30A16BF111511D63CD9 /* Pods-Tests-CocoaLumberjack-Private.xcconfig */,
+				CD3E6A74842530362B9BDE1F /* Pods-Tests-CocoaLumberjack-dummy.m */,
+				6A2E4BD13D7886C1314BF463 /* Pods-Tests-CocoaLumberjack-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PilightKit-CocoaLumberjack";
+			sourceTree = "<group>";
+		};
+		35E330B332222C0982A5EFDD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7243BDFBF463AF55D77E405B /* Pods-PilightKit */,
+				D60DD09C83279DA642DD7549 /* Pods-Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3C894E5D9CDC05CD751DC806 = {
+			isa = PBXGroup;
+			children = (
+				FB84EDA2B17C32053B762CA5 /* Podfile */,
+				5FBEA479520464CB6686944E /* Development Pods */,
+				7FB6B9175FBE2EFDE6A91603 /* Frameworks */,
+				1326CEE2A90B14BEFC5EFBA8 /* Pods */,
+				100D1D2B121E6D4DC6AB419F /* Products */,
+				35E330B332222C0982A5EFDD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		4B662C5946EF7EF40D6FDE9A /* PilightKit */ = {
+			isa = PBXGroup;
+			children = (
+				05F5534FFAA878F3D45E7623 /* Pod */,
+				E6FD7BAAC6D847ACB68EF384 /* Support Files */,
 			);
 			name = PilightKit;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		F22A21E37FD3243051C016A6 = {
+		564F325545D24CAD33492F31 /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
-				8FF3592B7E5D4012E095E666 /* Podfile */,
-				F9A12470080A91AC225FF589 /* Development Pods */,
-				72E9E29E9C10575C8E7F6368 /* Frameworks */,
-				A1111669659D2D8C651A7A1B /* Products */,
-				2AB40D80BB7FA02AA0900D36 /* Targets Support Files */,
+				F3D6F9A1B96A4C273F76D68D /* AsyncSocket.h */,
+				2678B217DD753776B766C539 /* AsyncSocket.m */,
+				DF553EF54A0F1E2131FA4E71 /* AsyncUdpSocket.h */,
+				1A97A3D95A8A030A2277BF83 /* AsyncUdpSocket.m */,
+				AFF6F39D4363EB4C1AE45268 /* GCDAsyncSocket.h */,
+				5307D1D42806ED3FBFF59F5F /* GCDAsyncSocket.m */,
+				E6E4002EE8D9D66A21C44DB8 /* GCDAsyncUdpSocket.h */,
+				B72B4E120F53873168ED0627 /* GCDAsyncUdpSocket.m */,
+				B7DBEC41F57F09E64878FE8D /* Support Files */,
 			);
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
-		F9A12470080A91AC225FF589 /* Development Pods */ = {
+		56D3EF1D0D26B265601C09B0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DFA44866B58EA2A3154AD82A /* PilightKit */,
+				FF1DA8A4F97BABED0E480995 /* JSONCreator.h */,
+				DCF32E8649D8681352E7A6DF /* JSONCreator.m */,
+				88BC3F1D729E7C092D1E5185 /* PilightControl.h */,
+				EC61728C951F243A6432B0B6 /* PilightControl.m */,
+				77E7A4A7C8A95C14D59890FB /* PilightControlDelegate.h */,
+				07877D649C864363CCAD65D2 /* PilightDateTime.h */,
+				A34A2CE2BD349E1D58519732 /* PilightDateTime.m */,
+				EC34A8CCA7A9BC74462D84A2 /* PilightDevice.h */,
+				EA4098096A5C8724F125AA0A /* PilightDevice.m */,
+				C1D6514A4E75DF70FCFCC06A /* PilightDeviceFactory.h */,
+				AE22E734D8FD1FFA9B8DB30B /* PilightDeviceFactory.m */,
+				7138187622BDADD5E0FF77F0 /* PilightDimmer.h */,
+				1A1890216E5C8F3FBD46F0D9 /* PilightDimmer.m */,
+				B8AF670C920208C87D809968 /* PilightGroup.h */,
+				A0CF99B92BB6F94A732A6A9F /* PilightGroup.m */,
+				FE1E4D6E194144D9BC074D15 /* PilightKit.h */,
+				13B958A621B99E2224D2FD34 /* PilightReadOnlyDevice.h */,
+				BCC6B6AAF331DCA4F01FF455 /* PilightReadOnlyDevice.m */,
+				4FEA3B44EA102E488F7E51BC /* PilightRelay.h */,
+				43A059137C0217167E50878E /* PilightRelay.m */,
+				CC4F28435BD3E385E43D76AF /* PilightScreen.h */,
+				6DE2A6910CD8D5D61114ECE1 /* PilightScreen.m */,
+				5317F329DD607CBD7B03F678 /* PilightStringDefinitions.h */,
+				79CC8602CC51E82CB7F48BA0 /* PilightSwitch.h */,
+				F9EB0D261A016E6DFB10CFA6 /* PilightSwitch.m */,
+				41E020C0F12223AA456D4488 /* PilightWeather.h */,
+				D0FDBAB24F546F9964D92040 /* PilightWeather.m */,
+				27B234F80699940716910C95 /* PilightWebcam.h */,
+				5E4A8E5CD0CFB68D6A6CB791 /* PilightWebcam.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5FBEA479520464CB6686944E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B662C5946EF7EF40D6FDE9A /* PilightKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		6015F22C8C09C04743A16CE4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				101EC67B4DD7CBD1A0365628 /* DDASLLogCapture.h */,
+				2A0672C96BC61ABD69EE1804 /* DDASLLogCapture.m */,
+				21D54C83A2A68939B8EB4CE3 /* DDASLLogger.h */,
+				5C06D3C79FFE14D5844C489A /* DDASLLogger.m */,
+				37F74053C057D499304FD05E /* DDAbstractDatabaseLogger.h */,
+				4D43D84CF7C4398688F2A7B3 /* DDAbstractDatabaseLogger.m */,
+				281849D78A15FC5CD152AD9C /* DDAssertMacros.h */,
+				EAF15E48AA9B769325B94319 /* DDFileLogger.h */,
+				D09C84A89B0AD0BB06B909E8 /* DDFileLogger.m */,
+				F4B8EA0AA14270DA0AB4608E /* DDLegacyMacros.h */,
+				23E12B195550725DEAD6AE56 /* DDLog.h */,
+				ED7B9DC8123BDAF128311AE7 /* DDLog.m */,
+				D2DD551EBD95E95CD679CF9D /* DDLog+LOGV.h */,
+				D7DA89CC42D927D684AF3A78 /* DDLogMacros.h */,
+				F49ADCFC6D02C54411AF7C47 /* DDTTYLogger.h */,
+				3970FB120A3FC74767D8916B /* DDTTYLogger.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		7243BDFBF463AF55D77E405B /* Pods-PilightKit */ = {
+			isa = PBXGroup;
+			children = (
+				3B73A1D70F8E846995C4CA8E /* Pods-PilightKit-acknowledgements.markdown */,
+				0557C66771E1FC5A6AC21437 /* Pods-PilightKit-acknowledgements.plist */,
+				E135CBA5F97619B994280E5D /* Pods-PilightKit-dummy.m */,
+				79D47B4887B53DF45FED4CB6 /* Pods-PilightKit-environment.h */,
+				04E53F737AB9BA42AB238B0D /* Pods-PilightKit-resources.sh */,
+				2A055B376AD6FB29EC51D760 /* Pods-PilightKit.debug.xcconfig */,
+				2C301FC757B504022969D2B3 /* Pods-PilightKit.release.xcconfig */,
+			);
+			name = "Pods-PilightKit";
+			path = "Target Support Files/Pods-PilightKit";
+			sourceTree = "<group>";
+		};
+		7C8156C7571284CF28B5823A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EEE10986A10C7708835FE357 /* CFNetwork.framework */,
+				290C6334EF436D6171B51C37 /* Foundation.framework */,
+				D12D87E32F88AD059B5151C9 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7FB6B9175FBE2EFDE6A91603 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C8156C7571284CF28B5823A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9E9612EC0E2801D3E85AB92 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				05C6DC4D911641078C813FBC /* CocoaLumberjack.h */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		B7DBEC41F57F09E64878FE8D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED7C08CA83719C3088491353 /* Pods-PilightKit-CocoaAsyncSocket.xcconfig */,
+				720CA73EE39D76860A7EDABC /* Pods-PilightKit-CocoaAsyncSocket-Private.xcconfig */,
+				7A244D73CF63206FCBAF0EB2 /* Pods-PilightKit-CocoaAsyncSocket-dummy.m */,
+				FE2C16ABA2FBEF73F179FABF /* Pods-PilightKit-CocoaAsyncSocket-prefix.pch */,
+				4B425A39C4B225426680864A /* Pods-Tests-CocoaAsyncSocket.xcconfig */,
+				5EE9B914BA70E6A301A8B5E8 /* Pods-Tests-CocoaAsyncSocket-Private.xcconfig */,
+				341EE3778C2D659951491278 /* Pods-Tests-CocoaAsyncSocket-dummy.m */,
+				C0880EFD62009F844E44F0AB /* Pods-Tests-CocoaAsyncSocket-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PilightKit-CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		D59EBDD6778C709FC747C0EC /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				6015F22C8C09C04743A16CE4 /* Core */,
+				A9E9612EC0E2801D3E85AB92 /* Default */,
+				F3B7A32E0DCDF2FA1BB6D455 /* Extensions */,
+				2B458C531E826A8F6752F7BB /* Support Files */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		D60DD09C83279DA642DD7549 /* Pods-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				204FD29FE9C4AA1A80422636 /* Pods-Tests-acknowledgements.markdown */,
+				E9E7FE68C91A5AD15E8AB76B /* Pods-Tests-acknowledgements.plist */,
+				EC4942064E8350CCC056DD96 /* Pods-Tests-dummy.m */,
+				876430516766911AC34F306A /* Pods-Tests-environment.h */,
+				398A4994BB57B2F1C33CB42A /* Pods-Tests-resources.sh */,
+				329D0889A3D1D517F84A7CCA /* Pods-Tests.debug.xcconfig */,
+				E9A421786D164707B47AA872 /* Pods-Tests.release.xcconfig */,
+			);
+			name = "Pods-Tests";
+			path = "Target Support Files/Pods-Tests";
+			sourceTree = "<group>";
+		};
+		E6FD7BAAC6D847ACB68EF384 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C8643D5E5C3FF37F44D5B80 /* Pods-PilightKit-PilightKit.xcconfig */,
+				1256591C687D47CA29DC7AB3 /* Pods-PilightKit-PilightKit-Private.xcconfig */,
+				75D05C97908229CA52D74CA8 /* Pods-PilightKit-PilightKit-dummy.m */,
+				FB9FBF2A6F20D47C3A41DB75 /* Pods-PilightKit-PilightKit-prefix.pch */,
+				BA5ED652FDB858F7FE0F32EE /* Pods-Tests-PilightKit.xcconfig */,
+				16DCD00EA12519CFFE492BAB /* Pods-Tests-PilightKit-Private.xcconfig */,
+				9258426F61B87A1609347C0E /* Pods-Tests-PilightKit-dummy.m */,
+				32259E4EE06AC8FDA98E10DE /* Pods-Tests-PilightKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-PilightKit-PilightKit";
+			sourceTree = "<group>";
+		};
+		F3B7A32E0DCDF2FA1BB6D455 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94BA1E72BB4100A84DDD5C9B /* DDContextFilterLogFormatter.h */,
+				6D274D5550973A06F64D6780 /* DDContextFilterLogFormatter.m */,
+				5F816A701DA51E8671AC7089 /* DDDispatchQueueLogFormatter.h */,
+				8D4673F3707859682C9F044F /* DDDispatchQueueLogFormatter.m */,
+				55857C3334845AF5B0600387 /* DDMultiFormatter.h */,
+				92C48FB67CA1A4AFD3EA090B /* DDMultiFormatter.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		292F8B485F8A0CBFF3A14688 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AAFA3C92F574B2E2B8BF94 /* CocoaLumberjack.h in Headers */,
+				556D74112F437BE4C1F9F2AF /* DDASLLogCapture.h in Headers */,
+				1187B24C71C1F3E827CE363D /* DDASLLogger.h in Headers */,
+				043FBFB94CDA4FD82AA88177 /* DDAbstractDatabaseLogger.h in Headers */,
+				D96E58F88DA2501EF4CBBBF6 /* DDAssertMacros.h in Headers */,
+				E5C5F5EEE508CC7791A9B0C0 /* DDContextFilterLogFormatter.h in Headers */,
+				F15A82998149FDA289E761BD /* DDDispatchQueueLogFormatter.h in Headers */,
+				280C02B4041C6AAAB928610F /* DDFileLogger.h in Headers */,
+				5A2FA489F8256724299B14F1 /* DDLegacyMacros.h in Headers */,
+				0B151DB3FA1747DC1F2B334D /* DDLog+LOGV.h in Headers */,
+				98AA70860FA55B8CD6C7D0E8 /* DDLog.h in Headers */,
+				26C92A9D53065A31F86CAC97 /* DDLogMacros.h in Headers */,
+				0A00DB0951D909BCED254A78 /* DDMultiFormatter.h in Headers */,
+				62A970C45521E23A2F4B41E5 /* DDTTYLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DDEB8A0C49B7692A2551938 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE56E0026277490A209BAB0B /* CocoaLumberjack.h in Headers */,
+				5A2F40588B8F19E946B2CF66 /* DDASLLogCapture.h in Headers */,
+				8C718603A16FF006EBE08D59 /* DDASLLogger.h in Headers */,
+				85DFFA6A18008306182C5185 /* DDAbstractDatabaseLogger.h in Headers */,
+				7D54AB51060B683892273682 /* DDAssertMacros.h in Headers */,
+				FB2B225FE4167B3AC80394E4 /* DDContextFilterLogFormatter.h in Headers */,
+				9AEFD0CBC0AA5CDC26DF4EC6 /* DDDispatchQueueLogFormatter.h in Headers */,
+				539347532DD27513134F8790 /* DDFileLogger.h in Headers */,
+				B5771C82D3B5CB35F8CA81F9 /* DDLegacyMacros.h in Headers */,
+				212CA8DD5FB8EC76A1C6F56A /* DDLog+LOGV.h in Headers */,
+				8244D2A9605B52338D085CD8 /* DDLog.h in Headers */,
+				10E12C062EF887D4D339D83A /* DDLogMacros.h in Headers */,
+				7EAF5A6C7835521B5A0E85CC /* DDMultiFormatter.h in Headers */,
+				79A86C016484B1D706B68B24 /* DDTTYLogger.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A88A52E3F73B1698A5CD009F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9923AB31224E2864DE94AFCC /* AsyncSocket.h in Headers */,
+				B37D13DE6F85838F0D430E94 /* AsyncUdpSocket.h in Headers */,
+				C9C48F7B1A6D5B2EF0BAF1E2 /* GCDAsyncSocket.h in Headers */,
+				5C58192429D0FC902E3F77B5 /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9DAD81B8555840788EBEED4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051B639A6A0B8ABC8D284A0A /* AsyncSocket.h in Headers */,
+				370273B4078F116C054CC07A /* AsyncUdpSocket.h in Headers */,
+				80155B3298CE23C134790A7B /* GCDAsyncSocket.h in Headers */,
+				B64881F3FF33A472022858BE /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD5487A2ABA93EC219CA9323 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70F04EC5F70A541959D5CC3A /* JSONCreator.h in Headers */,
+				EE271473EEA56CE53F62D852 /* PilightControl.h in Headers */,
+				EF403FB21358C36B0E3F74A1 /* PilightControlDelegate.h in Headers */,
+				490079CA67385AB4A1A405A2 /* PilightDateTime.h in Headers */,
+				569325F877B53170CB59EDCE /* PilightDevice.h in Headers */,
+				319007F363B8668A8C48E044 /* PilightDeviceFactory.h in Headers */,
+				30347579401121F28A0235EA /* PilightDimmer.h in Headers */,
+				1F2703E02494D5D7DD1B57B5 /* PilightGroup.h in Headers */,
+				93F37E4080E9EC8EDD0A1A83 /* PilightKit.h in Headers */,
+				1F592B58503EC392BDD984FB /* PilightReadOnlyDevice.h in Headers */,
+				0266BCBD1566604ED25AF947 /* PilightRelay.h in Headers */,
+				6EE981681A22FFD898F2A003 /* PilightScreen.h in Headers */,
+				44EE62B7B765B8EEA6079536 /* PilightStringDefinitions.h in Headers */,
+				5765CF108253DECCC7D34B49 /* PilightSwitch.h in Headers */,
+				17FEB50CD535645929723DD2 /* PilightWeather.h in Headers */,
+				CAB27036D644011DD915B09C /* PilightWebcam.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD829C540BDA2CFDF2149022 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B08C03607BCF097447590A7A /* JSONCreator.h in Headers */,
+				BB78C6F1EC348CABADB89D02 /* PilightControl.h in Headers */,
+				FD702FC7C565F5EAF221FBB2 /* PilightControlDelegate.h in Headers */,
+				ADBF88CE0DC1D585C07D60BB /* PilightDateTime.h in Headers */,
+				A55D49C4F998B6C9B91695FE /* PilightDevice.h in Headers */,
+				28D44C610B546F51A79F46A7 /* PilightDeviceFactory.h in Headers */,
+				4B248DDD31C60E43FA16640F /* PilightDimmer.h in Headers */,
+				0B491628E7051FC55192FD14 /* PilightGroup.h in Headers */,
+				714A3DC9C3867C4FC10CC3CB /* PilightKit.h in Headers */,
+				0EA35DC07D4BC2141445671A /* PilightReadOnlyDevice.h in Headers */,
+				A745A35CD7BCDCFAFF245EE6 /* PilightRelay.h in Headers */,
+				B8E20B03E4A0751C54FCC1DB /* PilightScreen.h in Headers */,
+				5A7AEE39B2CF904F4144CBE7 /* PilightStringDefinitions.h in Headers */,
+				D00F62B8F1EFF2ED201589AC /* PilightSwitch.h in Headers */,
+				D3DDE2DCF7258EABE25155A9 /* PilightWeather.h in Headers */,
+				DC67077424D27A6811AC953F /* PilightWebcam.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		2914DD4A2DE82F104EAA19FF /* Pods-PilightKit-PilightKit-PilightKit */ = {
+		0257D76BD1B1DD5828DDE4ED /* Pods-PilightKit-CocoaLumberjack */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 929D5F941ADEA5888A53566B /* Build configuration list for PBXNativeTarget "Pods-PilightKit-PilightKit-PilightKit" */;
+			buildConfigurationList = 3173D7B8B79704357817BA56 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-CocoaLumberjack" */;
 			buildPhases = (
-				3A4DE0CD06313994089ADD0B /* Sources */,
-				5D6C082B89AF4187C87B336E /* Frameworks */,
-				F6370F6EB6A823766E6819AA /* Resources */,
+				50AADFEB7431FFDED58F7058 /* Sources */,
+				D05646CC341741E32FC302EF /* Frameworks */,
+				7DDEB8A0C49B7692A2551938 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PilightKit-CocoaLumberjack";
+			productName = "Pods-PilightKit-CocoaLumberjack";
+			productReference = 190492415CF76FF267C59B6C /* libPods-PilightKit-CocoaLumberjack.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3A00C340B0A04A76873AB6AE /* Pods-Tests-CocoaAsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA5565B062F029300F9306BB /* Build configuration list for PBXNativeTarget "Pods-Tests-CocoaAsyncSocket" */;
+			buildPhases = (
+				4FA7CE736DB5ECD6F80DA039 /* Sources */,
+				C376895C56E070C2E1BCFB38 /* Frameworks */,
+				A88A52E3F73B1698A5CD009F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-CocoaAsyncSocket";
+			productName = "Pods-Tests-CocoaAsyncSocket";
+			productReference = 5C1D04F2A94D01F295CE9A78 /* libPods-Tests-CocoaAsyncSocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6327E80AC270E924B9690C64 /* Pods-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EDA64FF84427A166C02E095 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
+			buildPhases = (
+				8B4248DF4C4DA809C3995178 /* Sources */,
+				FBABA24EB23479EF0B97ADC9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C59CC4D2825A8EA357CBFCD /* PBXTargetDependency */,
+				43264B8B83C5A5DCE2F226E4 /* PBXTargetDependency */,
+				59DF3DCE085EF513FCBBBF6B /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests";
+			productName = "Pods-Tests";
+			productReference = F8A2C616635B54FFC70B80E6 /* libPods-Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		68CE14BED377F3D913C5BA00 /* Pods-PilightKit-PilightKit-PilightKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A2F74F83CEEAB7E41F2C449 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-PilightKit-PilightKit" */;
+			buildPhases = (
+				E5C1599CC4F626CA15B2FE16 /* Sources */,
+				A7BE203AB0AE8F4FE4DA519D /* Frameworks */,
+				8E411933AF5FB45585EB514E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -146,54 +896,162 @@
 			);
 			name = "Pods-PilightKit-PilightKit-PilightKit";
 			productName = "Pods-PilightKit-PilightKit-PilightKit";
-			productReference = A18552449ADEB4B6FE29F899 /* PilightKit.bundle */;
+			productReference = 0691334B6DBDE73A5748BCBE /* PilightKit.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		649A550F37FAE4B3B055B3A3 /* Pods-PilightKit */ = {
+		6E1B19868231BB1A9EF91382 /* Pods-Tests-PilightKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7FBF13150402AC3A45E006A /* Build configuration list for PBXNativeTarget "Pods-PilightKit" */;
+			buildConfigurationList = 3D8A6764E3603E1E22CA54EB /* Build configuration list for PBXNativeTarget "Pods-Tests-PilightKit" */;
 			buildPhases = (
-				FC3FE22F7E9B121654702284 /* Sources */,
-				CAB8D964413782912F1EE289 /* Frameworks */,
+				8ECEBD963FBF5FFD254BA930 /* Sources */,
+				A5794297C629866FF9C68AA6 /* Frameworks */,
+				BD5487A2ABA93EC219CA9323 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F0D6A328BE25858C73AF11A6 /* PBXTargetDependency */,
+				F133A7E1B68A115BEE269765 /* PBXTargetDependency */,
+				2D9D801ED119F348DDE0B8BA /* PBXTargetDependency */,
+				060CF7CBAF537D571EA81A2D /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests-PilightKit";
+			productName = "Pods-Tests-PilightKit";
+			productReference = 0D33F640A0D624F1FEA22FC0 /* libPods-Tests-PilightKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		752C933DE9353685D9686134 /* Pods-Tests-PilightKit-PilightKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86BD504E4EDCD1CC4886AA21 /* Build configuration list for PBXNativeTarget "Pods-Tests-PilightKit-PilightKit" */;
+			buildPhases = (
+				36381097CF22FF3C8903232E /* Sources */,
+				055D1E933459EDC55745A32B /* Frameworks */,
+				5B30F782FFCCB1A64FEBF41A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-PilightKit-PilightKit";
+			productName = "Pods-Tests-PilightKit-PilightKit";
+			productReference = 24397906A9B7C8A4CBE83A14 /* PilightKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		7A7415FD31F1ACDE6D75BA81 /* Pods-PilightKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B2BC8889B55E2E8BD90D97D /* Build configuration list for PBXNativeTarget "Pods-PilightKit" */;
+			buildPhases = (
+				C07D6B2F5C088604EAEE28A9 /* Sources */,
+				CF582234FDB8CABB5CE52D89 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F04F226D27E319206D919D7 /* PBXTargetDependency */,
+				03ACD9F4576BA5E99230DA21 /* PBXTargetDependency */,
+				DD7FAE6956E3CD1076FF7D68 /* PBXTargetDependency */,
 			);
 			name = "Pods-PilightKit";
 			productName = "Pods-PilightKit";
-			productReference = 6C207E1D89F812A7320B08C8 /* libPods-PilightKit.a */;
+			productReference = 88BEC8168F69F1A792A599CF /* libPods-PilightKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A123AD0DEF439C044519C380 /* Pods-PilightKit-CocoaAsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD23406F0111813962C8C537 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-CocoaAsyncSocket" */;
+			buildPhases = (
+				14BE914B0C7B5C79D30FE306 /* Sources */,
+				6E6CA9CDCBA123CEF61F264C /* Frameworks */,
+				B9DAD81B8555840788EBEED4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PilightKit-CocoaAsyncSocket";
+			productName = "Pods-PilightKit-CocoaAsyncSocket";
+			productReference = 4AE4466EBB99B09E83F03E41 /* libPods-PilightKit-CocoaAsyncSocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A49F30974F2EB69A2C51013E /* Pods-PilightKit-PilightKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEACA03A8D2E4DEB68ACB479 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-PilightKit" */;
+			buildPhases = (
+				8FEC2AA8F828DFC0D44A56EB /* Sources */,
+				ED69F126B256B0E04AEFE753 /* Frameworks */,
+				CD829C540BDA2CFDF2149022 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				608D6E56DBF5A256814EF81A /* PBXTargetDependency */,
+				9D96CC8C9149772C12515D10 /* PBXTargetDependency */,
+				03C5822CF97DB116ACFDAFCD /* PBXTargetDependency */,
+			);
+			name = "Pods-PilightKit-PilightKit";
+			productName = "Pods-PilightKit-PilightKit";
+			productReference = E023AFF44782DF51DB47EA41 /* libPods-PilightKit-PilightKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7F02DF96D27DD315A7A304B /* Pods-Tests-CocoaLumberjack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D101EF7D8CE01B555BC09BC /* Build configuration list for PBXNativeTarget "Pods-Tests-CocoaLumberjack" */;
+			buildPhases = (
+				42992F0A21D86707CD799319 /* Sources */,
+				8E80896579D9A796F31168A4 /* Frameworks */,
+				292F8B485F8A0CBFF3A14688 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-CocoaLumberjack";
+			productName = "Pods-Tests-CocoaLumberjack";
+			productReference = 57DF303135E5AC9FB96395F0 /* libPods-Tests-CocoaLumberjack.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2FDDA4B073CCAF587C5C819B /* Project object */ = {
+		5D5039A5E17FA23169596C7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = CBD1101A2509894513D5649B /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2C0C916DAACE0908047C3CB2 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = F22A21E37FD3243051C016A6;
-			productRefGroup = A1111669659D2D8C651A7A1B /* Products */;
+			mainGroup = 3C894E5D9CDC05CD751DC806;
+			productRefGroup = 100D1D2B121E6D4DC6AB419F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				649A550F37FAE4B3B055B3A3 /* Pods-PilightKit */,
-				2914DD4A2DE82F104EAA19FF /* Pods-PilightKit-PilightKit-PilightKit */,
+				7A7415FD31F1ACDE6D75BA81 /* Pods-PilightKit */,
+				A123AD0DEF439C044519C380 /* Pods-PilightKit-CocoaAsyncSocket */,
+				0257D76BD1B1DD5828DDE4ED /* Pods-PilightKit-CocoaLumberjack */,
+				A49F30974F2EB69A2C51013E /* Pods-PilightKit-PilightKit */,
+				68CE14BED377F3D913C5BA00 /* Pods-PilightKit-PilightKit-PilightKit */,
+				6327E80AC270E924B9690C64 /* Pods-Tests */,
+				3A00C340B0A04A76873AB6AE /* Pods-Tests-CocoaAsyncSocket */,
+				E7F02DF96D27DD315A7A304B /* Pods-Tests-CocoaLumberjack */,
+				6E1B19868231BB1A9EF91382 /* Pods-Tests-PilightKit */,
+				752C933DE9353685D9686134 /* Pods-Tests-PilightKit-PilightKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F6370F6EB6A823766E6819AA /* Resources */ = {
+		5B30F782FFCCB1A64FEBF41A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E411933AF5FB45585EB514E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,39 +1061,236 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3A4DE0CD06313994089ADD0B /* Sources */ = {
+		14BE914B0C7B5C79D30FE306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FE5E344CD4A39BEA580C1AE /* AsyncSocket.m in Sources */,
+				15E964E9165A451C5103830D /* AsyncUdpSocket.m in Sources */,
+				559591DA81ED1A7680545D2C /* GCDAsyncSocket.m in Sources */,
+				DB71186B178454D11EB2C133 /* GCDAsyncUdpSocket.m in Sources */,
+				25FFEF602F27B5E448EC2582 /* Pods-PilightKit-CocoaAsyncSocket-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36381097CF22FF3C8903232E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC3FE22F7E9B121654702284 /* Sources */ = {
+		42992F0A21D86707CD799319 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F7AFB77BC44C3E87D9716A1 /* Pods-PilightKit-dummy.m in Sources */,
+				78FD40980E75E11A4B74456E /* DDASLLogCapture.m in Sources */,
+				B6141EDA598C1BC23861FFF7 /* DDASLLogger.m in Sources */,
+				52F675EF9B6881B2FC7448D0 /* DDAbstractDatabaseLogger.m in Sources */,
+				A446134275FA45C3E775E0F5 /* DDContextFilterLogFormatter.m in Sources */,
+				064A7B8290A9D0ADE2E47EA3 /* DDDispatchQueueLogFormatter.m in Sources */,
+				7BA85E40E4030D392EBB64D7 /* DDFileLogger.m in Sources */,
+				EF350B3DAFFA183DB97EB8C6 /* DDLog.m in Sources */,
+				55F4CADC3F86458A833CF789 /* DDMultiFormatter.m in Sources */,
+				AEA6EBD89E2C4B406DE18551 /* DDTTYLogger.m in Sources */,
+				33E1C5FCDEC4080CB1D777FE /* Pods-Tests-CocoaLumberjack-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FA7CE736DB5ECD6F80DA039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A67F75AE5FB0EA297893E1 /* AsyncSocket.m in Sources */,
+				C75ABE011559730399DED659 /* AsyncUdpSocket.m in Sources */,
+				6BF112D4BE4DC7FDDE146031 /* GCDAsyncSocket.m in Sources */,
+				6C893328C84995002028F98D /* GCDAsyncUdpSocket.m in Sources */,
+				F4C3C69E9A15DBAEC2EE7CB1 /* Pods-Tests-CocoaAsyncSocket-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50AADFEB7431FFDED58F7058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60DBA900A7138EC909B4ADCE /* DDASLLogCapture.m in Sources */,
+				45BC23F670BB0A2D60088396 /* DDASLLogger.m in Sources */,
+				0B7A65E81F0D898F4D138FC6 /* DDAbstractDatabaseLogger.m in Sources */,
+				01A1E841EB8B159615DE7627 /* DDContextFilterLogFormatter.m in Sources */,
+				D8092419753E037AA731B3AC /* DDDispatchQueueLogFormatter.m in Sources */,
+				D5A28F14E44644A923EFCF65 /* DDFileLogger.m in Sources */,
+				94DBF32FD429FA62F6757099 /* DDLog.m in Sources */,
+				A50AFFB3DA5EAED6781B2C5B /* DDMultiFormatter.m in Sources */,
+				FAEE9AA2D206942E1AEA64ED /* DDTTYLogger.m in Sources */,
+				DEA02D73B98444C93A6DB8C0 /* Pods-PilightKit-CocoaLumberjack-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B4248DF4C4DA809C3995178 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				230863E0477A72EA20C08D19 /* Pods-Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ECEBD963FBF5FFD254BA930 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81396F8B9E4E824F2E0E6F92 /* JSONCreator.m in Sources */,
+				2F5BD5BF987024D392F6392F /* PilightControl.m in Sources */,
+				8405E5DE348552FD22542543 /* PilightDateTime.m in Sources */,
+				BEB80521FD84B60B53D3EED1 /* PilightDevice.m in Sources */,
+				1BC120790A41FDC1078B13C9 /* PilightDeviceFactory.m in Sources */,
+				7AF68C848513E7E6C36536C3 /* PilightDimmer.m in Sources */,
+				8E4B8714F033E235654D21AF /* PilightGroup.m in Sources */,
+				27CC004AC26BD5E00DE57BBE /* PilightReadOnlyDevice.m in Sources */,
+				8D195B3002ECAFD6EEBDCB67 /* PilightRelay.m in Sources */,
+				56577557B06A770A7FF312F8 /* PilightScreen.m in Sources */,
+				78B10851ADB694B7C71330F5 /* PilightSwitch.m in Sources */,
+				389FCDD96F13D8853DFF245F /* PilightWeather.m in Sources */,
+				B2B0A21B58B3AE0E80698233 /* PilightWebcam.m in Sources */,
+				FA217BFF036A65B60B2C2BC5 /* Pods-Tests-PilightKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEC2AA8F828DFC0D44A56EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8548F78FF02055AE52FC709 /* JSONCreator.m in Sources */,
+				5C19C395942726A19052504D /* PilightControl.m in Sources */,
+				5675F8F5C53B56F0F0D59D5F /* PilightDateTime.m in Sources */,
+				E57D97F19247D71368DE0245 /* PilightDevice.m in Sources */,
+				9E23A731AF42CFE10B7BA20C /* PilightDeviceFactory.m in Sources */,
+				325E39F8CA59BA9B813FD452 /* PilightDimmer.m in Sources */,
+				7839607EB04AFB901FB19ADB /* PilightGroup.m in Sources */,
+				FF6F7D1262892146BC25E756 /* PilightReadOnlyDevice.m in Sources */,
+				D1DC5AD257D1A42B2389A565 /* PilightRelay.m in Sources */,
+				65B9AD7F1BA8B2A89D4BAEA9 /* PilightScreen.m in Sources */,
+				D4918926D71CBC59F4842CAF /* PilightSwitch.m in Sources */,
+				B4F87DBC55BA91830063E0C6 /* PilightWeather.m in Sources */,
+				42D3387FB7BF4A44D8815DB7 /* PilightWebcam.m in Sources */,
+				7C047B1ABB557EF738DB8110 /* Pods-PilightKit-PilightKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07D6B2F5C088604EAEE28A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50188E6A81CD43E34088C724 /* Pods-PilightKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5C1599CC4F626CA15B2FE16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F0D6A328BE25858C73AF11A6 /* PBXTargetDependency */ = {
+		03ACD9F4576BA5E99230DA21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PilightKit-CocoaLumberjack";
+			target = 0257D76BD1B1DD5828DDE4ED /* Pods-PilightKit-CocoaLumberjack */;
+			targetProxy = AEBBE48E34803EBA382C2AC6 /* PBXContainerItemProxy */;
+		};
+		03C5822CF97DB116ACFDAFCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-PilightKit-PilightKit-PilightKit";
-			target = 2914DD4A2DE82F104EAA19FF /* Pods-PilightKit-PilightKit-PilightKit */;
-			targetProxy = F1E47678F37503A01B12491D /* PBXContainerItemProxy */;
+			target = 68CE14BED377F3D913C5BA00 /* Pods-PilightKit-PilightKit-PilightKit */;
+			targetProxy = AB5B18DBB121190DC1B36C2F /* PBXContainerItemProxy */;
+		};
+		060CF7CBAF537D571EA81A2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-PilightKit-PilightKit";
+			target = 752C933DE9353685D9686134 /* Pods-Tests-PilightKit-PilightKit */;
+			targetProxy = C374F2E1D179552EDC2BFAA1 /* PBXContainerItemProxy */;
+		};
+		2D9D801ED119F348DDE0B8BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-CocoaLumberjack";
+			target = E7F02DF96D27DD315A7A304B /* Pods-Tests-CocoaLumberjack */;
+			targetProxy = 75962BA1EC88C91B282AC3FE /* PBXContainerItemProxy */;
+		};
+		43264B8B83C5A5DCE2F226E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-CocoaLumberjack";
+			target = E7F02DF96D27DD315A7A304B /* Pods-Tests-CocoaLumberjack */;
+			targetProxy = C846B491A0F372743FB9394E /* PBXContainerItemProxy */;
+		};
+		4F04F226D27E319206D919D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PilightKit-CocoaAsyncSocket";
+			target = A123AD0DEF439C044519C380 /* Pods-PilightKit-CocoaAsyncSocket */;
+			targetProxy = BA9FDD77333C59342F312A35 /* PBXContainerItemProxy */;
+		};
+		59DF3DCE085EF513FCBBBF6B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-PilightKit";
+			target = 6E1B19868231BB1A9EF91382 /* Pods-Tests-PilightKit */;
+			targetProxy = 002C4E517C6EAF5423BE00C9 /* PBXContainerItemProxy */;
+		};
+		608D6E56DBF5A256814EF81A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PilightKit-CocoaAsyncSocket";
+			target = A123AD0DEF439C044519C380 /* Pods-PilightKit-CocoaAsyncSocket */;
+			targetProxy = 1C5E98F5E0CDEE4E37C9832A /* PBXContainerItemProxy */;
+		};
+		7C59CC4D2825A8EA357CBFCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-CocoaAsyncSocket";
+			target = 3A00C340B0A04A76873AB6AE /* Pods-Tests-CocoaAsyncSocket */;
+			targetProxy = 54F524A210E3994E22EC6F4B /* PBXContainerItemProxy */;
+		};
+		9D96CC8C9149772C12515D10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PilightKit-CocoaLumberjack";
+			target = 0257D76BD1B1DD5828DDE4ED /* Pods-PilightKit-CocoaLumberjack */;
+			targetProxy = B99C2670E9B28720B22B452A /* PBXContainerItemProxy */;
+		};
+		DD7FAE6956E3CD1076FF7D68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PilightKit-PilightKit";
+			target = A49F30974F2EB69A2C51013E /* Pods-PilightKit-PilightKit */;
+			targetProxy = BA80BD640252432546528543 /* PBXContainerItemProxy */;
+		};
+		F133A7E1B68A115BEE269765 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-CocoaAsyncSocket";
+			target = 3A00C340B0A04A76873AB6AE /* Pods-Tests-CocoaAsyncSocket */;
+			targetProxy = C68231E79A82F9ED5977708B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1E6E9FC4A48A7051A73ACE0C /* Release */ = {
+		015BC7114A6557DDFB55E4EE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CBB64312BDD91EF04F53FE6 /* Pods-PilightKit.release.xcconfig */;
+			baseConfigurationReference = 5EE9B914BA70E6A301A8B5E8 /* Pods-Tests-CocoaAsyncSocket-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-CocoaAsyncSocket/Pods-Tests-CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		06332ECA66F4F6CB502D739B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C301FC757B504022969D2B3 /* Pods-PilightKit.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -246,7 +1301,34 @@
 			};
 			name = Release;
 		};
-		4302A6963842A4A55C8EF2C1 /* Release */ = {
+		1937B9C57E2B474C3218DF2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3653E8D215468817C207945 /* Pods-PilightKit-CocoaLumberjack-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PilightKit-CocoaLumberjack/Pods-PilightKit-CocoaLumberjack-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1B318C7CD6D09906911E5B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PilightKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		29FD69D6EABE8B0D24E9F488 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,14 +1355,62 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8D26F1312078C8A029782905 /* Release */ = {
+		2C821AE6007CBF607DD2C471 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EE9B914BA70E6A301A8B5E8 /* Pods-Tests-CocoaAsyncSocket-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-CocoaAsyncSocket/Pods-Tests-CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		38B05EFBE25C50C535521327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1256591C687D47CA29DC7AB3 /* Pods-PilightKit-PilightKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PilightKit-PilightKit/Pods-PilightKit-PilightKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7FFED9D1B6F9EA53773A470C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1256591C687D47CA29DC7AB3 /* Pods-PilightKit-PilightKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PilightKit-PilightKit/Pods-PilightKit-PilightKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		865015FDAC075C71A7CE81B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -289,14 +1419,62 @@
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
-		CE0571879A5384753D3D3778 /* Debug */ = {
+		86C984409A360128EB9899DC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA72D95B262878214BB298A4 /* Pods-PilightKit.debug.xcconfig */;
+			baseConfigurationReference = 720CA73EE39D76860A7EDABC /* Pods-PilightKit-CocoaAsyncSocket-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PilightKit-CocoaAsyncSocket/Pods-PilightKit-CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8A7D68B179B2B9C7142D42B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16DCD00EA12519CFFE492BAB /* Pods-Tests-PilightKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-PilightKit/Pods-Tests-PilightKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		93934A6E492CE9E7C3976A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16DCD00EA12519CFFE492BAB /* Pods-Tests-PilightKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-PilightKit/Pods-Tests-PilightKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		99F1ADEB674A443A05375BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 329D0889A3D1D517F84A7CCA /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -307,18 +1485,7 @@
 			};
 			name = Debug;
 		};
-		DC9DA019CDCD9EE034F5AA2D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = PilightKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		F626E042A066BD150977C912 /* Debug */ = {
+		9B456CA757C7794D4A5DB287 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -350,44 +1517,234 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
+		A252F7EC0B53EBE5BC47AE7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 720CA73EE39D76860A7EDABC /* Pods-PilightKit-CocoaAsyncSocket-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PilightKit-CocoaAsyncSocket/Pods-PilightKit-CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A93BD1CCEBF22AF9DA6BAEC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9A421786D164707B47AA872 /* Pods-Tests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AEE793118C652F0132788F36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB2B30A16BF111511D63CD9 /* Pods-Tests-CocoaLumberjack-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-CocoaLumberjack/Pods-Tests-CocoaLumberjack-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D532C01D495CB317C7F2AC0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FB2B30A16BF111511D63CD9 /* Pods-Tests-CocoaLumberjack-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-CocoaLumberjack/Pods-Tests-CocoaLumberjack-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E20D37FF64947D14603DB9EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A055B376AD6FB29EC51D760 /* Pods-PilightKit.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E31723822368647BE478093E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3653E8D215468817C207945 /* Pods-PilightKit-CocoaLumberjack-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PilightKit-CocoaLumberjack/Pods-PilightKit-CocoaLumberjack-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E8CEDC0A799700B69C14517F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PilightKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		F9A3111D7092EF6358EC3D37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = PilightKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		929D5F941ADEA5888A53566B /* Build configuration list for PBXNativeTarget "Pods-PilightKit-PilightKit-PilightKit" */ = {
+		0B2BC8889B55E2E8BD90D97D /* Build configuration list for PBXNativeTarget "Pods-PilightKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC9DA019CDCD9EE034F5AA2D /* Debug */,
-				8D26F1312078C8A029782905 /* Release */,
+				E20D37FF64947D14603DB9EA /* Debug */,
+				06332ECA66F4F6CB502D739B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBD1101A2509894513D5649B /* Build configuration list for PBXProject "Pods" */ = {
+		0D101EF7D8CE01B555BC09BC /* Build configuration list for PBXNativeTarget "Pods-Tests-CocoaLumberjack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F626E042A066BD150977C912 /* Debug */,
-				4302A6963842A4A55C8EF2C1 /* Release */,
+				D532C01D495CB317C7F2AC0F /* Debug */,
+				AEE793118C652F0132788F36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7FBF13150402AC3A45E006A /* Build configuration list for PBXNativeTarget "Pods-PilightKit" */ = {
+		0EDA64FF84427A166C02E095 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE0571879A5384753D3D3778 /* Debug */,
-				1E6E9FC4A48A7051A73ACE0C /* Release */,
+				99F1ADEB674A443A05375BCB /* Debug */,
+				A93BD1CCEBF22AF9DA6BAEC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A2F74F83CEEAB7E41F2C449 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-PilightKit-PilightKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B318C7CD6D09906911E5B57 /* Debug */,
+				F9A3111D7092EF6358EC3D37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C0C916DAACE0908047C3CB2 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B456CA757C7794D4A5DB287 /* Debug */,
+				29FD69D6EABE8B0D24E9F488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3173D7B8B79704357817BA56 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-CocoaLumberjack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E31723822368647BE478093E /* Debug */,
+				1937B9C57E2B474C3218DF2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D8A6764E3603E1E22CA54EB /* Build configuration list for PBXNativeTarget "Pods-Tests-PilightKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7D68B179B2B9C7142D42B8 /* Debug */,
+				93934A6E492CE9E7C3976A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86BD504E4EDCD1CC4886AA21 /* Build configuration list for PBXNativeTarget "Pods-Tests-PilightKit-PilightKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				865015FDAC075C71A7CE81B5 /* Debug */,
+				E8CEDC0A799700B69C14517F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD23406F0111813962C8C537 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86C984409A360128EB9899DC /* Debug */,
+				A252F7EC0B53EBE5BC47AE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA5565B062F029300F9306BB /* Build configuration list for PBXNativeTarget "Pods-Tests-CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015BC7114A6557DDFB55E4EE /* Debug */,
+				2C821AE6007CBF607DD2C471 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEACA03A8D2E4DEB68ACB479 /* Build configuration list for PBXNativeTarget "Pods-PilightKit-PilightKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38B05EFBE25C50C535521327 /* Debug */,
+				7FFED9D1B6F9EA53773A470C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2FDDA4B073CCAF587C5C819B /* Project object */;
+	rootObject = 5D5039A5E17FA23169596C7D /* Project object */;
 }

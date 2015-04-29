@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2914DD4A2DE82F104EAA19FF"
+               BlueprintIdentifier = "68CE14BED377F3D913C5BA00"
                BuildableName = "PilightKit.bundle"
                BlueprintName = "Pods-PilightKit-PilightKit-PilightKit"
                ReferencedContainer = "container:Pods.xcodeproj">

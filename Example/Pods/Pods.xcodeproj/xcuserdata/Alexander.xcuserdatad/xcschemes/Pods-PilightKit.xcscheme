@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "649A550F37FAE4B3B055B3A3"
+               BlueprintIdentifier = "7A7415FD31F1ACDE6D75BA81"
                BuildableName = "libPods-PilightKit.a"
                BlueprintName = "Pods-PilightKit"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-PilightKit-CocoaAsyncSocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PilightKit-CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PilightKit-PilightKit-PilightKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PilightKit-PilightKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -14,15 +29,80 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Tests-CocoaAsyncSocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Tests-CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Tests-PilightKit-PilightKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Tests-PilightKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2914DD4A2DE82F104EAA19FF</key>
+		<key>0257D76BD1B1DD5828DDE4ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>649A550F37FAE4B3B055B3A3</key>
+		<key>3A00C340B0A04A76873AB6AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6327E80AC270E924B9690C64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>68CE14BED377F3D913C5BA00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E1B19868231BB1A9EF91382</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>752C933DE9353685D9686134</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7A7415FD31F1ACDE6D75BA81</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A123AD0DEF439C044519C380</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A49F30974F2EB69A2C51013E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7F02DF96D27DD315A7A304B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
