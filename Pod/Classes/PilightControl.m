@@ -61,7 +61,7 @@
 
 -(instancetype)initWithHost:(NSString *)aHost port:(UInt16)aPort {
     self = [super init];
-    if (self) {        
+    if (self) {
         dispatch_queue_t pilightQueue;
         pilightQueue = dispatch_queue_create("de.pilightKit.thread", NULL);
         
@@ -82,7 +82,7 @@
 -(void)connect {
     if (self.socket.isConnected)
         [self.socket disconnect];
-        
+    
     NSError *err = nil;
     
     if (![self.socket connectToHost:self.host onPort:self.port withTimeout:10 error:&err]) {
@@ -92,12 +92,17 @@
     }
 }
 
+- (void)disconnect {
+    if (self.socket.isConnected)
+        [self.socket disconnect];
+}
+
 
 #pragma mark GCDAsyncSocket delegate
 
 - (void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port {
     [self.delegate control:self didConnectToHost:self.host];
-   
+    
     DDLogInfo(@"Connected to \"%@\" on port %ld", self.host, (long)self.port);
     
     [self sendData:[JSONCreator clientIdentificationWithOptions:self.identificationOptions mediaType:self.mediaType uuid:self.uuid] tag:0];
@@ -235,7 +240,7 @@
 
 
 - (void)setState:(PilightSwitchState)state forSwitch:(PilightSwitch*)plSwitch {
-   NSData *jsonData = [JSONCreator changeStateForSwitch:plSwitch toState:state];
+    NSData *jsonData = [JSONCreator changeStateForSwitch:plSwitch toState:state];
     
     [self sendData:jsonData tag:0];
 }
