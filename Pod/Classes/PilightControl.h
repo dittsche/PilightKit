@@ -49,6 +49,7 @@ typedef NS_ENUM(NSUInteger, PilightMediaType) {
 - (instancetype)initWithHost:(NSString*)host port:(UInt16)port;
 
 - (void)connect;
+- (void)disconnect;
 - (void)setState:(PilightSwitchState)state forSwitch:(PilightSwitch*)plSwitch;
 - (void)setDimLevel:(NSNumber*)dimLevel forDimmer:(PilightDimmer*)plDimmer;
 - (void)setState:(PilightScreenState)state forScreen:(PilightScreen*)plScreen;
