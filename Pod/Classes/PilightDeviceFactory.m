@@ -17,6 +17,7 @@
 #import "PilightWebcam.h"
 #import "PilightRelay.h"
 #import "PilightDateTime.h"
+#import "PilightLabel.h"
 
 @implementation PilightDeviceFactory
 
@@ -43,6 +44,9 @@
             
         case PilightDeviceTypeDateTime:
             return [[PilightDateTime alloc] initWithControl:control andDictionary:dict];
+            
+        case PilightDeviceTypeLabel:
+            return [[PilightLabel alloc] initWithControl:control andDictionary:dict];
             
         default:
             return [[PilightDevice alloc] initWithControl:control andDictionary:dict];

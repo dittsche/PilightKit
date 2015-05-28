@@ -17,7 +17,8 @@ typedef NS_ENUM(NSUInteger, PilightDeviceType) {
     PilightDeviceTypePendingSwitch = 7,
     PilightDeviceTypeDateTime = 8,
     PilightDeviceTypeXBMC = 9,
-    PilightDeviceTypeWebcam = 11
+    PilightDeviceTypeWebcam = 11,
+    PilightDeviceTypeLabel = 15
 };
 
 @class PilightControl, PilightGroup;

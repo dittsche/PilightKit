@@ -14,6 +14,7 @@
 @interface PilightReadOnlyDevice ()
 
 @property (nonatomic) BOOL readOnly;
+@property (nonatomic) BOOL confirm;
 
 @end
 
@@ -26,6 +27,11 @@
             self.readOnly = [[dict objectForKey:PILIGHT_KEY_READONLY] boolValue];
         else
             self.readOnly = YES;
+        
+        if ([dict objectForKey:PILIGHT_KEY_CONFIRM])
+            self.confirm = [[dict objectForKey:PILIGHT_KEY_CONFIRM] boolValue];
+        else
+            self.confirm = YES;
         
         [self updateFromDictionary:dict];
     }

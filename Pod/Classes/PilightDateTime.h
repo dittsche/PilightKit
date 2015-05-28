@@ -7,6 +7,7 @@
 //
 
 #import "PilightDevice.h"
+
 @interface PilightDateTime : PilightDevice
 
 @property (nonatomic, readonly) NSDate* date;

@@ -65,6 +65,7 @@
 #define PILIGHT_KEY_TYPE @"type"
 #define PILIGHT_KEY_GROUP @"group"
 #define PILIGHT_KEY_TIMESTAMP @"timestamp"
+#define PILIGHT_KEY_CONFIRM @"confirm"
 
 
 // switch specific keys and values
@@ -146,6 +147,12 @@
 
 #define PILIGHT_KEY_SHOW_DATETIME @"show-datetime"
 #define PILIGHT_KEY_FORMAT @"format"
+
+
+// label specific keys and values
+
+#define PILIGHT_KEY_LABEL @"label"
+#define PILIGHT_KEY_COLOR @"color"
 
 
 

@@ -12,3 +12,4 @@
 #import <PilightKit/PilightScreen.h>
 #import <PilightKit/PilightWebcam.h>
 #import <PilightKit/PilightDateTime.h>
+#import <PilightKit/PilightLabel.h>

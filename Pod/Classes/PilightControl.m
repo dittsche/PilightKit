@@ -119,7 +119,7 @@
 }
 
 - (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag {
-    DDLogInfo(@"Recevied: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    DDLogInfo(@"Received: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     
     NSError *err;
     NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];

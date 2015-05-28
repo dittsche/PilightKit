@@ -12,5 +12,6 @@
 @interface PilightReadOnlyDevice : PilightDevice
 
 @property (nonatomic, readonly) BOOL readOnly;
+@property (nonatomic, readonly) BOOL confirm;
 
 @end
