@@ -13,7 +13,7 @@
 @interface PilightGroup ()
 
 @property (nonatomic) NSString* name;
-@property (nonatomic) NSMutableDictionary* devices;
+@property (nonatomic) NSDictionary* devices;
 
 @end
 
@@ -26,13 +26,15 @@
     self = [super init];
     if (self) {
         self.name = name;
-        self.devices = [NSMutableDictionary new];
+        self.devices = [NSDictionary new];
     }
     return self;
 }
 
 - (void)addDevice:(PilightDevice *)device {
-    [self.devices setObject:device forKey:device.key];
+    NSMutableDictionary* tempDevices = [NSMutableDictionary dictionaryWithDictionary:self.devices];
+    [tempDevices setObject:device forKey:device.key];
+    self.devices = tempDevices;
 }
 
 @end

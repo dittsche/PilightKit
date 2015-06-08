@@ -43,8 +43,9 @@ typedef NS_ENUM(NSUInteger, PilightMediaType) {
 
 @property (nonatomic, readwrite) id <PilightControlDelegate> delegate;
 
-@property (nonatomic, readonly) NSMutableDictionary* devices;
-@property (nonatomic, readonly) NSMutableDictionary* groups;
+@property (nonatomic, readonly) NSDictionary* registry;
+@property (nonatomic, readonly) NSDictionary* devices;
+@property (nonatomic, readonly) NSDictionary* groups;
 
 - (instancetype)initWithHost:(NSString*)host port:(UInt16)port;
 

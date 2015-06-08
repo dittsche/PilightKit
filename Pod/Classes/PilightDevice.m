@@ -16,7 +16,7 @@
 @property (nonatomic) PilightControl* control;
 @property (nonatomic) NSString* name;
 @property (nonatomic) NSArray* protocols;
-@property (nonatomic) NSMutableSet *groups;
+@property (nonatomic) NSSet *groups;
 @property (nonatomic) NSArray *mediaTypes;
 @property (nonatomic) NSInteger order;
 @property (nonatomic) PilightDeviceType type;
@@ -68,7 +68,9 @@
 }
 
 - (void)addGroup:(PilightGroup *)group {
-    [self.groups addObject:group];
+    NSMutableSet* tempGroups = [NSMutableSet setWithSet:self.groups];
+    [tempGroups addObject:group];
+    self.groups = tempGroups;
 }
 
 @end

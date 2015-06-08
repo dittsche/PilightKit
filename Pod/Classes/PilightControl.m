@@ -49,8 +49,8 @@
 @property (nonatomic) NSNumber* ram;
 
 @property (nonatomic) NSDictionary* registry;
-@property (nonatomic) NSMutableDictionary* devices;
-@property (nonatomic) NSMutableDictionary* groups;
+@property (nonatomic) NSDictionary* devices;
+@property (nonatomic) NSDictionary* groups;
 
 @end
 
@@ -73,15 +73,12 @@
         self.identificationOptions = PilightIdentificationReceiver | PilightIdentificationConfig | PilightIdentificationCore | PilightIdentificationStats | PilightIdentificationForward;
         
         self.registry = [NSDictionary new];
-        self.devices = [NSMutableDictionary new];
-        self.groups = [NSMutableDictionary new];
     }
     return self;
 }
 
 -(void)connect {
-    if (self.socket.isConnected)
-        [self.socket disconnect];
+    [self disconnect];
     
     NSError *err = nil;
     
@@ -119,45 +116,51 @@
 }
 
 - (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag {
-    DDLogInfo(@"Received: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    NSString* stringObject = [NSString stringWithUTF8String:[data bytes]];
     
-    NSError *err;
-    NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
-    
-    if (err) {
-        DDLogError(@"%@", err);
-    }
-    
-    if (object && [object isKindOfClass:[NSDictionary class]]) {
-        if (tag == REGISTER_CLIENT) {
-            if ([[object objectForKey:PILIGHT_KEY_STATUS] isEqualToString:PILIGHT_VALUE_SUCCESS]) {
-                [self sendData:[JSONCreator requestConfig] tag:0];
-                [self.socket readDataToData:[GCDAsyncSocket LFLFData] withTimeout:-1.0 tag:REQUEST_CONFIG];
-                return;
-            } else if ([[object objectForKey:PILIGHT_KEY_STATUS] isEqualToString:PILIGHT_VALUE_FAILURE]) {
-                DDLogError(@"Unsuccessfull identification");
-            }
-        } else if (tag == REQUEST_CONFIG) {
-            [self parseConfig:[object objectForKey:PILIGHT_KEY_CONFIG]];
-            [self sendData:[JSONCreator requestValues] tag:0];
-            [self.socket readDataToData:[GCDAsyncSocket LFLFData] withTimeout:-1.0 tag:REQUEST_VALUES];
-        } else if (tag == REQUEST_VALUES) {
-            [self parseValues:object];
-        } else {
-            NSString* origin = [object objectForKey:PILIGHT_KEY_ORIGIN];
-            if ([origin isEqualToString:PILIGHT_VALUE_UPDATE]) {
-                [self parseUpdate:object];
-            }   else if ([origin isEqualToString:PILIGHT_VALUE_CORE]) {
-                [self parseCore:[object objectForKey:PILIGHT_KEY_VALUES]];
-            }   else if ([origin isEqualToString:PILIGHT_VALUE_RECEIVER] || [origin isEqualToString:PILIGHT_VALUE_SENDER]) {
-                if ([self.delegate respondsToSelector:@selector(control:didReceiveMessage:)]) {
-                    [self.delegate control:self didReceiveMessage:object];
+    if ([stringObject isEqualToString:PILIGHT_BEAT]) {
+        DDLogInfo(@"Received: BEAT");
+    }   else {
+        DDLogInfo(@"Received: %@", stringObject);
+        
+        NSError *err;
+        NSDictionary *object = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
+        
+        if (err) {
+            DDLogError(@"%@", err);
+        }
+        
+        if (object && [object isKindOfClass:[NSDictionary class]]) {
+            if (tag == REGISTER_CLIENT) {
+                if ([[object objectForKey:PILIGHT_KEY_STATUS] isEqualToString:PILIGHT_VALUE_SUCCESS]) {
+                    [self sendData:[JSONCreator requestConfig] tag:0];
+                    [self.socket readDataToData:[GCDAsyncSocket LFLFData] withTimeout:-1.0 tag:REQUEST_CONFIG];
+                    return;
+                } else if ([[object objectForKey:PILIGHT_KEY_STATUS] isEqualToString:PILIGHT_VALUE_FAILURE]) {
+                    DDLogError(@"Unsuccessfull identification");
                 }
-            }
-            
-            if (self.identificationOptions & PilightIdentificationForward) {
-                if ([self.delegate respondsToSelector:@selector(control:didReceiveSocketData:)]) {
-                    [self.delegate control:self didReceiveSocketData:object];
+            } else if (tag == REQUEST_CONFIG) {
+                [self parseConfig:[object objectForKey:PILIGHT_KEY_CONFIG]];
+                [self sendData:[JSONCreator requestValues] tag:0];
+                [self.socket readDataToData:[GCDAsyncSocket LFLFData] withTimeout:-1.0 tag:REQUEST_VALUES];
+            } else if (tag == REQUEST_VALUES) {
+                [self parseValues:object];
+            } else {
+                NSString* origin = [object objectForKey:PILIGHT_KEY_ORIGIN];
+                if ([origin isEqualToString:PILIGHT_VALUE_UPDATE]) {
+                    [self parseUpdate:object];
+                }   else if ([origin isEqualToString:PILIGHT_VALUE_CORE]) {
+                    [self parseCore:[object objectForKey:PILIGHT_KEY_VALUES]];
+                }   else if ([origin isEqualToString:PILIGHT_VALUE_RECEIVER] || [origin isEqualToString:PILIGHT_VALUE_SENDER]) {
+                    if ([self.delegate respondsToSelector:@selector(control:didReceiveMessage:)]) {
+                        [self.delegate control:self didReceiveMessage:object];
+                    }
+                }
+                
+                if (self.identificationOptions & PilightIdentificationForward) {
+                    if ([self.delegate respondsToSelector:@selector(control:didReceiveSocketData:)]) {
+                        [self.delegate control:self didReceiveSocketData:object];
+                    }
                 }
             }
         }
@@ -184,8 +187,8 @@
     NSDictionary *guiDevices = [config objectForKey:PILIGHT_KEY_GUI];
     NSDictionary *devices = [config objectForKey:PILIGHT_KEY_DEVICES];
     
-    [self.devices removeAllObjects];
-    [self.groups removeAllObjects];
+    NSMutableDictionary* tempDevices = [NSMutableDictionary new];
+    NSMutableDictionary* tempGroups = [NSMutableDictionary new];
     
     for (NSString* guiDeviceKey in guiDevices) {
         NSMutableDictionary *guiDeviceDict = [guiDevices objectForKey:guiDeviceKey];
@@ -197,19 +200,28 @@
         PilightDevice *device = [PilightDeviceFactory getDeviceInstance:guiDeviceDict forControl:self];
         device.key = guiDeviceKey;
         
-        for (NSString* groupName in [guiDeviceDict objectForKey:PILIGHT_KEY_GROUP]) {
-            PilightGroup* group = [self.groups objectForKey:groupName];
+        NSMutableArray* deviceGroups = [guiDeviceDict objectForKey:PILIGHT_KEY_GROUP];
+        
+        if (deviceGroups.count == 0) {
+            [deviceGroups addObject:@"Ungrouped"];
+        }
+        
+        for (NSString* groupName in deviceGroups) {
+            PilightGroup* group = [tempGroups objectForKey:groupName];
             if (group == nil) {
                 group = [[PilightGroup alloc] initWithName:groupName];
-                [self.groups setValue:group forKey:groupName];
+                [tempGroups setValue:group forKey:groupName];
             }
             
             [group addDevice:device];
             [device addGroup:group];
         }
         
-        [self.devices setValue:device forKey:guiDeviceKey];
+        [tempDevices setValue:device forKey:guiDeviceKey];
     }
+    
+    self.devices = [NSDictionary dictionaryWithDictionary:tempDevices];
+    self.groups = [NSDictionary dictionaryWithDictionary:tempGroups];
     
     [self.delegate controlDidParseConfig:self];
 }
@@ -242,25 +254,25 @@
 - (void)setState:(PilightSwitchState)state forSwitch:(PilightSwitch*)plSwitch {
     NSData *jsonData = [JSONCreator changeStateForSwitch:plSwitch toState:state];
     
-    [self sendData:jsonData tag:0];
+    [self sendData:jsonData tag:-1];
 }
 
 - (void)setDimLevel:(NSNumber*)dimLevel forDimmer:(PilightDimmer*)plDimmer {
     NSData *jsonData = [JSONCreator changeDimLevelForDimmer:plDimmer toLevel:dimLevel];
     
-    [self sendData:jsonData tag:0];
+    [self sendData:jsonData tag:-1];
 }
 
 - (void)setState:(PilightScreenState)state forScreen:(PilightScreen*)plScreen {
     NSData *jsonData = [JSONCreator changeStateForScreen:plScreen toState:state];
     
-    [self sendData:jsonData tag:0];
+    [self sendData:jsonData tag:-1];
 }
 
 - (void)updateWeatherDevice:(PilightWeather*)plWeather {
     NSData *jsonData = [JSONCreator updateWeatherDevice:plWeather];
     
-    [self sendData:jsonData tag:0];
+    [self sendData:jsonData tag:-1];
 }
 
 @end

@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, PilightDeviceType) {
 @property (nonatomic) NSString* key;
 @property (nonatomic, readonly) NSArray* protocols;
 @property (nonatomic, readonly) NSString* name;
-@property (nonatomic, readonly) NSMutableSet *groups;
+@property (nonatomic, readonly) NSSet *groups;
 @property (nonatomic, readonly) NSArray *mediaTypes;
 @property (nonatomic, readonly) NSInteger order;
 @property (nonatomic, readonly) PilightDeviceType type;

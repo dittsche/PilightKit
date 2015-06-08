@@ -28,10 +28,14 @@
         else
             self.readOnly = YES;
         
-        if ([dict objectForKey:PILIGHT_KEY_CONFIRM])
+        if ([dict objectForKey:PILIGHT_KEY_CONFIRM]) {
             self.confirm = [[dict objectForKey:PILIGHT_KEY_CONFIRM] boolValue];
-        else
-            self.confirm = YES;
+        }   else {
+            if ([self.control.registry[PILIGHT_KEY_PILIGHT][PILIGHT_KEY_VERSION][PILIGHT_KEY_CURRENT] doubleValue] < 7.0)
+                self.confirm = NO;
+            else
+                self.confirm = YES;
+        }
         
         [self updateFromDictionary:dict];
     }
@@ -45,10 +49,6 @@
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"%@, readonly %ld", [super description], (long)(self.readOnly ? 1 : 0)];
-}
-
-- (void)addGroup:(PilightGroup *)group {
-    [self.groups addObject:group];
 }
 
 @end

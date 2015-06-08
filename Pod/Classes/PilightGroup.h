@@ -13,7 +13,7 @@
 @interface PilightGroup : NSObject
 
 @property (nonatomic, readonly) NSString* name;
-@property (nonatomic, readonly) NSMutableDictionary* devices;
+@property (nonatomic, readonly) NSDictionary* devices;
 
 - (instancetype)initWithName:(NSString*)name;
 - (void)addDevice:(PilightDevice*)device;

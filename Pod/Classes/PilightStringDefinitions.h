@@ -7,6 +7,7 @@
 //
 
 
+
 #define PILIGHT_KEY_ACTION @"action"
 #define PILIGHT_VALUE_IDENTIFY @"identify"
 #define PILIGHT_VALUE_REQUEST_CONFIG @"request config"
@@ -43,10 +44,16 @@
 #define PILIGHT_VALUE_SENDER @"sender"
 #define PILIGHT_VALUE_CONTROL @"control"
 
+#define PILIGHT_HEART @"HEART\n"
+#define PILIGHT_BEAT @"BEAT\n\n"
+
 
 // keys in config
 
 #define PILIGHT_KEY_REGISTRY @"registry"
+#define PILIGHT_KEY_PILIGHT @"pilight"
+#define PILIGHT_KEY_VERSION @"version"
+#define PILIGHT_KEY_CURRENT @"current"
 #define PILIGHT_KEY_GUI @"gui"
 
 
